@@ -1,0 +1,22 @@
+:root{
+    --color-fondo:#1A1A2E;
+    --color-texto-claro: #F0F3F4;
+    --color-acento-principal: #00BCD4;
+    --color-acento-secundario: #7B1FA2;
+    --color-neutro-metal: #495057;
+}
+
+body{
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:var(--color-fondo);
+    line-height:1.6; 
+}
+
+h1,h2,h3{
+    font-family: 'poppins', sans-serif;
+    color: var(--color-acento-principal);
+    text-align:center;
+    margin-bottom:20px;
+}
