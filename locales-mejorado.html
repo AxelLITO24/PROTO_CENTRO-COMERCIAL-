@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra todos los locales comerciales de Urban Plaza Mall">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
+    <title>Locales Comerciales - Urban Plaza Mall</title>
+</head>
+<body>
+  <!-- Header se carga automáticamente desde components.js -->
+
+  <main id="main-content">
+    <section class="buscador-seccion" aria-labelledby="buscador-titulo">
+        <h2 id="buscador-titulo"> Encuentra tu Local</h2>
+        <div class="buscador-container">
+            <label for="buscar-local" class="sr-only">Buscar local por nombre</label>
+            <input type="search" id="buscar-local" placeholder="Buscar por nombre (ej: Gamer Pro, Belle Epoque...)" aria-describedby="buscar-ayuda" autocomplete="off"/>
+            <span id="buscar-ayuda" class="sr-only">Escribe el nombre del local para buscarlo en tiempo real</span>
+            <button type="button" id="btn-limpiar" aria-label="Limpiar búsqueda"></button>
+        </div>
+        <div id="resultado-busqueda" role="status" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <section class="mapa-seccion" aria-labelledby="mapa-titulo">
+        <h2 id="mapa-titulo"> Mapa Interactivo del Mall</h2>
+        <div class="mapa-container" role="img" aria-label="Mapa interactivo de los locales del centro comercial">
+            <div class="planta-mall">
+                <div class="nivel" data-nivel="Planta Baja">
+                    <h3>Planta Baja</h3>
+                    <div class="locales-grid">
+                        <button class="local-mapa" data-local="gamer-pro" aria-label="Ver información de Gamer Pro PC Gamers">
+                            <span class="local-numero">1</span><span class="local-nombre">Gamer Pro</span>
+                        </button>
+                        <button class="local-mapa" data-local="hermes-gear" aria-label="Ver información de Hermes Gear">
+                            <span class="local-numero">2</span><span class="local-nombre">Hermes Gear</span>
+                        </button>
+                        <button class="local-mapa" data-local="collective" aria-label="Ver información de The Collective">
+                            <span class="local-numero">3</span><span class="local-nombre">The Collective</span>
+                        </button>
+                        <button class="local-mapa" data-local="studio-fit" aria-label="Ver información de Studio Fit">
+                            <span class="local-numero">4</span><span class="local-nombre">Studio Fit</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="nivel" data-nivel="Primer Piso">
+                    <h3>Primer Piso</h3>
+                    <div class="locales-grid">
+                        <button class="local-mapa" data-local="belle-epoque" aria-label="Ver información de Belle Epoque">
+                            <span class="local-numero">5</span><span class="local-nombre">Belle Epoque</span>
+                        </button>
+                        <button class="local-mapa" data-local="green-life" aria-label="Ver información de Green Life Market">
+                            <span class="local-numero">6</span><span class="local-nombre">Green Life</span>
+                        </button>
+                        <button class="local-mapa" data-local="home-co" aria-label="Ver información de Home & Co">
+                            <span class="local-numero">7</span><span class="local-nombre">Home & Co</span>
+                        </button>
+                        <button class="local-mapa" data-local="barber-club" aria-label="Ver información de The Barber Club">
+                            <span class="local-numero">8</span><span class="local-nombre">Barber Club</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="nivel" data-nivel="Segundo Piso">
+                    <h3>Segundo Piso</h3>
+                    <div class="locales-grid">
+                        <button class="local-mapa" data-local="vision-total" aria-label="Ver información de Óptica Visión Total">
+                            <span class="local-numero">9</span><span class="local-nombre">Visión Total</span>
+                        </button>
+                        <button class="local-mapa" data-local="pets-spa" aria-label="Ver información de Pet's Urban Spa">
+                            <span class="local-numero">10</span><span class="local-nombre">Pet's Spa</span>
+                        </button>
+                        <button class="local-mapa" data-local="travel-hub" aria-label="Ver información de Travel Hub">
+                            <span class="local-numero">11</span><span class="local-nombre">Travel Hub</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-local" class="modal" role="dialog" aria-labelledby="modal-titulo" aria-modal="true" hidden>
+            <div class="modal-contenido">
+                <button class="modal-cerrar" aria-label="Cerrar información del local"></button>
+                <h3 id="modal-titulo"></h3>
+                <img id="modal-imagen" src="" alt=""/>
+                <p id="modal-descripcion"></p>
+                <p id="modal-ubicacion"></p>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer se carga automáticamente desde components.js -->
+
+  <script src="components.js"></script>
+  <script src="locales-interactivo.js"></script>
+</body>
+</html>

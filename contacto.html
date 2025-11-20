@@ -1,65 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Urban Plaza Mall. Formulario de contacto para consultas sobre locales, eventos y servicios.">
+    <meta name="keywords" content="contacto, urban plaza, consultas, atención al cliente, formulario">
+    <meta property="og:title" content="Contacto - Urban Plaza Mall">
+    <meta property="og:description" content="Ponete en contacto con nosotros para cualquier consulta. Estamos para ayudarte.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
-    <title>Urban Plaza Mall</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Contacto - Urban Plaza Mall</title>
 </head>
 <body>
-  <header>
-    <div class="container header-row">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">☰</button>
-      <h1 class="sp-title reveal">Bienvenidos a Urban Mall Plaza </h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html">Nuestros Servicios</a></li>
-                <li><a href="entretenimiento.html">Entretenimiento</a></li>
-                <li><a href="locales.html">Nuestros Locales</a></li>
-                <li><a href="ofertas.html">Ofertas imperdibles</a></li>
-                <li><a href="gastronomia.html">Nuestra gastronomia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="seccion-servicios">
-        <h2>📧 ¿Tienes Preguntas? Contáctanos</h2>
+  <!-- Header se carga automáticamente desde components.js -->
+
+  <main id="main-content">
+    <section class="seccion-servicios" aria-labelledby="contacto-titulo">
+        <h2 id="contacto-titulo">¿Tienes Preguntas? Contáctanos</h2>
         
         <div class="contenedor-formulario">
             
-            <form action="/submit-contact" method="POST">
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" novalidate aria-labelledby="contacto-titulo">
                 
                 <div class="campo">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="nombre">Nombre Completo: <span aria-label="campo obligatorio">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true" aria-describedby="nombre-error">
+                    <span id="nombre-error" class="error-mensaje" role="alert" aria-live="polite"></span>
                 </div>
 
                 <div class="campo">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Correo Electrónico: <span aria-label="campo obligatorio">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error email-ayuda">
+                    <span id="email-ayuda" class="ayuda-texto">Formato: ejemplo@correo.com</span>
+                    <span id="email-error" class="error-mensaje" role="alert" aria-live="polite"></span>
                 </div>
 
                 <div class="campo">
-                    <label for="asunto">Asunto:</label>
-                    <select id="asunto" name="asunto" required>
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 11 1234-5678" aria-describedby="telefono-ayuda">
+                    <span id="telefono-ayuda" class="ayuda-texto">Incluye código de área si deseas que te contactemos</span>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto: <span aria-label="campo obligatorio">*</span></label>
+                    <select id="asunto" name="asunto" required aria-required="true" aria-describedby="asunto-error">
                         <option value="">Selecciona un Asunto</option>
                         <option value="consulta_local">Consulta sobre Local Comercial</option>
-                        <option value="sugerencia">Sugerencia/Reclamo</option>
+                        <option value="sugerencia">Sugerencia o Reclamo</option>
                         <option value="eventos">Información sobre Eventos</option>
                         <option value="urban_pass">Consulta Urban Pass</option>
                         <option value="otro">Otro</option>
                     </select>
+                    <span id="asunto-error" class="error-mensaje" role="alert" aria-live="polite"></span>
                 </div>
 
                 <div class="campo">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                    <label for="mensaje">Mensaje: <span aria-label="campo obligatorio">*</span></label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true" aria-describedby="mensaje-error mensaje-contador"></textarea>
+                    <span id="mensaje-contador" class="ayuda-texto">Mínimo 10 caracteres</span>
+                    <span id="mensaje-error" class="error-mensaje" role="alert" aria-live="polite"></span>
                 </div>
 
-                <button type="submit">Enviar Mensaje</button>
+                <div class="campo">
+                    <button type="submit">Enviar Mensaje</button>
+                </div>
+
+                <p class="nota-privacidad"><small>Los campos marcados con <span aria-label="asterisco">*</span> son obligatorios. Tus datos serán tratados de forma confidencial según nuestra política de privacidad.</small></p>
 
             </form>
 
         </div>
-    </div>
+
+        <div class="info-adicional">
+            <h3>Otras formas de contacto</h3>
+            <ul>
+                <li><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></li>
+                <li><strong>Email:</strong> <a href="mailto:info@urbanplazamall.com">info@urbanplazamall.com</a></li>
+                <li><strong>Dirección:</strong> Av. Principal 1234, Ciudad, Argentina</li>
+                <li><strong>Horario:</strong> Lunes a Domingo de 10:00 a 22:00 hs</li>
+            </ul>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer se carga automáticamente desde components.js -->
+
+  <script src="components.js"></script>
+  <script src="locales-interactivo.js"></script>
+  <script src="contacto-validacion.js"></script>
+</body>
+</html>

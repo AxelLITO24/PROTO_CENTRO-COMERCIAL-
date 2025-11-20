@@ -1,62 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Plaza Mall</title>
+    <meta name="description" content="Gastronomía en Urban Plaza Mall: café de especialidad, hamburguesas gourmet, sushi, pizza italiana y helados artesanales.">
+    <meta name="keywords" content="gastronomia, restaurantes, comida, food hall, sushi, pizza, hamburguesas">
+    <meta property="og:title" content="Gastronomía - Urban Plaza Mall">
+    <meta property="og:description" content="Las mejores opciones gastronómicas en un solo lugar: desde café de especialidad hasta pizza italiana y sushi fresco.">
+    <meta property="og:image" content="imagenes/gastro.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Gastronomía - Urban Plaza Mall</title>
 </head>
 <body>
-  <header>
-    <div class="container header-row">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">☰</button>
-      <link rel="stylesheet" href="styles.css">
-      <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
-      <h1 class="sp-title reveal">Bienvenidos a Urban Mall Plaza </h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html">Nuestros Servicios</a></li>
-                <li><a href="entretenimiento.html">Entretenimiento</a></li>
-                <li><a href="locales.html">Nuestros Locales</a></li>
-                <li><a href="ofertas.html">Ofertas imperdibles</a></li>
-                <li><a href="gastronomia.html">Nuestra gastronomia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+  <!-- Header se carga automáticamente desde components.js -->
+
+  <main id="main-content">
+    <div class="page-header">
+      <h1>Gastronomía</h1>
+      <p class="page-subtitle">Sabores del mundo en un solo lugar</p>
     </div>
-    <div class="seccion-servicios">
-        <h2>🍽️ Gastronomía y Patio de Comidas</h2>
+
+    <section class="seccion-servicios" aria-labelledby="gastro-titulo">
+        <div class="section-title-container">
+          <h2 id="gastro-titulo">Nuestros Locales</h2>
+          <p class="section-description">Variedad gastronómica para todos los gustos</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Starbucks Coffee</h3>
-                <p>El lugar ideal para trabajar, reunirse o disfrutar de un café de especialidad y un ambiente cómodo. Ubicado en el nivel de acceso.</p>
-                <img src="starbucks.jpg" alt="Local de Starbucks con mesas">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>McAlistair Burgers (Alternativa a Fast Food)</h3>
-                <p>Nuestra hamburguesería premium. Carne 100% vacuna, pan artesanal y combinaciones gourmet. Comida rápida con calidad.</p>
-                <img src="mcalistair_burgers.jpg" alt="Hamburguesas gourmet">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/cafe.png" alt="Starbucks Coffee" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Starbucks Coffee</h3>
+                    <p>Café de especialidad en un ambiente cómodo, ideal para trabajar o reunirse.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Nippon Sushi & Wok</h3>
-                <p>La mejor cocina asiática. Sushi fresco, platos de wok personalizables y ramen tradicional. Rápido, fresco y de alta calidad.</p>
-                <img src="sushi_wok.jpg" alt="Plato de sushi y wok">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/gastro.png" alt="McAlistair Burgers" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>McAlistair Burgers</h3>
+                    <p>Hamburguesería premium con carne 100% vacuna y pan artesanal.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Forno 22 (Pizza Italiana)</h3>
-                <p>Pizzas estilo napolitano cocinadas en horno de leña. Ingredientes importados y un ambiente vibrante para compartir en familia o con amigos.</p>
-                <img src="forno22_pizza.jpg" alt="Pizza napolitana en horno de leña">
-            </div>
-            
-            <div class="servicio-bloque">
-                <h3>Gelato Dolce Vita</h3>
-                <p>Heladería artesanal con sabores innovadores y clásicos. Postres y copas de helado ideales para el after-office.</p>
-                <img src="gelato_dolce.jpg" alt="Copa de helado artesanal">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/gastro.png" alt="Nippon Sushi y Wok" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Nippon Sushi & Wok</h3>
+                    <p>Cocina asiática con sushi fresco, wok personalizable y ramen tradicional.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/gastro.png" alt="Forno 22 Pizza Italiana" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Forno 22</h3>
+                    <p>Pizzas napolitanas en horno de leña con ingredientes importados.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/cafe.png" alt="Gelato Dolce Vita" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Gelato Dolce Vita</h3>
+                    <p>Heladería artesanal con sabores innovadores y postres exclusivos.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
+  </main>
+
+  <!-- Footer se carga automáticamente desde components.js -->
+
+  <script src="components.js"></script>
+  <script src="locales-interactivo.js"></script>
+</body>
+</html>

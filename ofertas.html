@@ -1,57 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ofertas y promociones exclusivas en Urban Plaza Mall. Descuentos, cuotas sin interés y beneficios para clientes.">
+    <meta name="keywords" content="ofertas, promociones, descuentos, urban pass, cuotas sin interés, cashback">
+    <meta property="og:title" content="Ofertas Imperdibles - Urban Plaza Mall">
+    <meta property="og:description" content="Aprovechá nuestras ofertas exclusivas: 20% OFF con Urban Pass, cuotas sin interés y más beneficios.">
+    <meta property="og:image" content="imagenes/ofertas.jpg">
     <link rel="stylesheet" href="styles.css">
-    <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap"
-    name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Plaza Mall</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Ofertas - Urban Plaza Mall</title>
 </head>
 <body>
-  <header>
-    <div class="container header-row">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">☰</button>
-      <h1 class="sp-title reveal">Bienvenidos a Urban Mall Plaza </h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html">Nuestros Servicios</a></li>
-                <li><a href="entretenimiento.html">Entretenimiento</a></li>
-                <li><a href="locales.html">Nuestros Locales</a></li>
-                <li><a href="ofertas.html">Ofertas imperdibles</a></li>
-                <li><a href="gastronomia.html">Nuestra gastronomia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+  <!-- Header se carga automáticamente desde components.js -->
+
+  <main id="main-content">
+    <div class="page-header">
+      <h1>Ofertas Exclusivas</h1>
+      <p class="page-subtitle">Promociones y beneficios diseñados para que ahorres más</p>
     </div>
 
-    <div class="seccion-servicios">
-        <h2>Nuestras Promociones y Ofertas Exclusivas</h2>
+    <section class="seccion-servicios" aria-labelledby="ofertas-titulo">
+        <div class="section-title-container">
+          <h2 id="ofertas-titulo">Promociones Vigentes</h2>
+          <p class="section-description">Aprovechá estos beneficios disponibles todo el mes</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Beneficio Exclusivo Urban Pass</h3>
-                <p>¡**20% de Descuento Adicional**! Presentando tu Urban Pass, obtén un 20% de descuento en la segunda unidad en locales adheridos de moda y gastronomía.</p>
-                <img src="urban_pass_offer.jpg" alt="Tarjeta Urban Pass con signo de descuento">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>Bancos: 3 y 6 Cuotas sin Interés</h3>
-                <p>Promoción con Banco Urbano. Compra en 3 o 6 cuotas fijas sin interés en tecnología, deportes y decoración. ¡Planifica tus gastos!</p>
-                <img src="banco_urbano.jpg" alt="Tarjetas de crédito con logo de cuotas">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/urban pass.png" alt="Urban Pass 20% descuento" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Urban Pass 20% OFF</h3>
+                    <p>Presentá tu Urban Pass y obtené 20% de descuento en la segunda unidad.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Cashless Weekend (Billeteras Virtuales)</h3>
-                <p>Todos los viernes y sábados: 25% de reintegro en tu primera compra del día pagando con QR de Billetera "City Pay" (tope $25000).</p>
-                <img src="qr_pay.jpg" alt="Icono de pago con código QR">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/emprendimiento.png" alt="Cuotas sin interés" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Cuotas sin Interés</h3>
+                    <p>Comprá en 3 o 6 cuotas fijas sin interés en tecnología, deportes y deco.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Parking Gratis + Almuerzo</h3>
-                <p>Consumiendo más de $XX.XXX en nuestro Food Hall, obtienes 2 horas de estacionamiento gratuito. ¡Disfruta sin apuros!</p>
-                <img src="parking_free.jpg" alt="Ticket de parking y plato de comida">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/emprendimiento.png" alt="Cashless Weekend" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Cashless Weekend</h3>
+                    <p>25% de reintegro viernes y sábados pagando con QR (tope $25.000).</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/parcking.png" alt="Parking gratis" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Parking Gratis</h3>
+                    <p>Consumiendo +$15.000 en Food Hall, obtenés 2 horas de parking gratis.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
+  </main>
+
+  <!-- Footer se carga automáticamente desde components.js -->
+
+  <script src="components.js"></script>
+  <script src="locales-interactivo.js"></script>
+</body>
+</html>

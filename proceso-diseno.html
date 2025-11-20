@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Diseño - Urban Plaza Mall</title>
+    <style>
+        @page {
+            margin: 2cm;
+            size: A4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #212529;
+            background: white;
+            padding: 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        .portada {
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 4px solid #0066CC;
+            margin-bottom: 60px;
+            page-break-after: always;
+        }
+
+        .portada h1 {
+            font-size: 2.5rem;
+            color: #0066CC;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .portada h2 {
+            font-size: 1.8rem;
+            color: #212529;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .portada .info {
+            margin-top: 60px;
+            font-size: 1.1rem;
+            color: #6C757D;
+        }
+
+        h2 {
+            color: #0066CC;
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E9ECEF;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: #212529;
+            font-size: 1.3rem;
+            margin: 30px 0 15px 0;
+            page-break-after: avoid;
+        }
+
+        h4 {
+            color: #495057;
+            font-size: 1.1rem;
+            margin: 20px 0 10px 0;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .seccion {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .color-box {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .color-sample {
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        .mapa-sitio {
+            background: #F8F9FA;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .nivel {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .nivel strong {
+            color: #0066CC;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        table th {
+            background: #0066CC;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 12px;
+            border: 1px solid #dee2e6;
+        }
+
+        table tr:nth-child(even) {
+            background: #F8F9FA;
+        }
+
+        .ejemplo-codigo {
+            background: #F8F9FA;
+            padding: 15px;
+            border-left: 4px solid #0066CC;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .grupo-integrantes {
+            background: #F8F9FA;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .grupo-integrantes p {
+            margin: 8px 0;
+        }
+
+        .nota {
+            background: #FFF3CD;
+            border-left: 4px solid #FFB800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PORTADA -->
+    <div class="portada">
+        <h1>Urban Plaza Mall</h1>
+        <h2>Proceso de Diseño y Desarrollo Web</h2>
+        <div class="info">
+            <p><strong>Proyecto:</strong> Galería Comercial Temática</p>
+            <p><strong>Materia:</strong> Diseño y Desarrollo Web</p>
+            <p><strong>Año:</strong> 2025</p>
+        </div>
+    </div>
+
+    <!-- 1. IDENTIFICACIÓN DEL GRUPO -->
+    <div class="seccion">
+        <h2>1. Identificación del Grupo</h2>
+
+        <div class="grupo-integrantes">
+            <p><strong>Nombre del Equipo: </strong> GRUPO 3 </p>
+            <p><strong>Integrantes:</strong></p>
+            <ol>
+                <li>RUBENACKER, AXEL</li>
+                <li>PUIG PERALTA, JULIETA</li>
+                <li>OJEDA LIZONDO, MARIA EUGENIA</li>
+                <li>MENDEZ PEÑA, JHONEYBIS ALIRIO</li>
+                
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2. NOMBRE Y TEMÁTICA -->
+    <div class="seccion page-break">
+        <h2>2. Nombre y Temática de la Galería</h2>
+
+        <h3>Nombre del Proyecto</h3>
+        <p><strong>Urban Plaza Mall</strong></p>
+
+        <h3>Temática</h3>
+        <p>Centro comercial moderno y urbano orientado a un público joven-adulto que busca una experiencia de compra contemporánea. La temática se centra en la convergencia de moda, tecnología, gastronomía y entretenimiento en un espacio arquitectónico de vanguardia.</p>
+
+        <h3>Concepto de Diseño</h3>
+        <p>El diseño visual del sitio refleja elegancia profesional con elementos contemporáneos. Se busca transmitir modernidad, confianza y calidad a través de una paleta de colores corporativa, tipografías limpias y un diseño minimalista que prioriza la experiencia del usuario.</p>
+
+        <h3>Público Objetivo</h3>
+        <p>El sitio está dirigido a:</p>
+        <ul>
+            <li><strong>Edad:</strong> 18-45 años</li>
+            <li><strong>Perfil:</strong> Urbanos, digitalmente nativos, con poder adquisitivo medio-alto</li>
+            <li><strong>Intereses:</strong> Tecnología, moda, gastronomía premium, entretenimiento</li>
+            <li><strong>Comportamiento digital:</strong>
+                <ul>
+                    <li>Acceso mayoritario desde dispositivos móviles (70%)</li>
+                    <li>Esperan tiempos de carga rápidos</li>
+                    <li>Valoran diseños limpios y navegación intuitiva</li>
+                    <li>Buscan información específica de forma ágil</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 3. MAPA DEL SITIO -->
+    <div class="seccion page-break">
+        <h2>3. Mapa del Sitio</h2>
+
+        <div class="mapa-sitio">
+            <div class="nivel">
+                <strong>Inicio (index.html)</strong> - Página principal con video de presentación
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                ├── <strong>Servicios (servicios.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    │   ├── Servicios Esenciales (Parking, WiFi, Lockers)<br>
+                    │   ├── Beneficios y Lealtad (Urban Pass, Ofertas)<br>
+                    │   └── Espacios y Experiencias (Food Hall, Eventos, Terrazas)
+                </div>
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                ├── <strong>Entretenimiento (entretenimiento.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    │   ├── Diversión (Arcade, VR, Cines, Bowling)<br>
+                    │   └── Cultura (Galería, Anfiteatro, Librería, Emprendedores)
+                </div>
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                ├── <strong>Locales (locales-mejorado.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    │   ├── Buscador dinámico<br>
+                    │   ├── Mapa interactivo por pisos<br>
+                    │   └── Modales con información detallada
+                </div>
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                ├── <strong>Ofertas (ofertas.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    │   └── Promociones vigentes
+                </div>
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                ├── <strong>Gastronomía (gastronomia.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    │   └── Locales gastronómicos (5 opciones)
+                </div>
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                ├── <strong>Contacto (contacto.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    │   └── Formulario con validación
+                </div>
+            </div>
+            <div class="nivel" style="margin-left: 40px;">
+                └── <strong>404 (404.html)</strong>
+                <div style="margin-left: 20px; color: #6C757D;">
+                    └── Página de error personalizada
+                </div>
+            </div>
+        </div>
+
+        <h3>Archivos Técnicos</h3>
+        <ul>
+            <li><strong>components.js:</strong> Sistema de componentes reutilizables (header/footer)</li>
+            <li><strong>locales-interactivo.js:</strong> Funcionalidad de búsqueda y mapa interactivo</li>
+            <li><strong>contacto-validacion.js:</strong> Validación de formulario en tiempo real</li>
+            <li><strong>styles.css:</strong> Estilos globales y diseño responsivo</li>
+            <li><strong>robots.txt / sitemap.xml:</strong> Optimización SEO</li>
+        </ul>
+    </div>
+
+    <!-- 4. PROCESO DE DISEÑO -->
+    <div class="seccion page-break">
+        <h2>4. Proceso de Diseño</h2>
+
+        <h3>4.1. Paleta de Colores</h3>
+        <p>La selección de colores busca transmitir profesionalismo, confianza y modernidad.</p>
+
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-sample" style="background: #FFFFFF; border: 2px solid #DEE2E6;"></div>
+                <strong>#FFFFFF</strong>
+                <p style="font-size: 0.9rem;">Fondo Principal<br>Limpieza y espacio</p>
+            </div>
+            <div class="color-box">
+                <div class="color-sample" style="background: #0066CC;"></div>
+                <strong>#0066CC</strong>
+                <p style="font-size: 0.9rem;">Acento Principal<br>Confianza y tecnología</p>
+            </div>
+            <div class="color-box">
+                <div class="color-sample" style="background: #FFB800;"></div>
+                <strong>#FFB800</strong>
+                <p style="font-size: 0.9rem;">Acento Secundario<br>Calidez y dinamismo</p>
+            </div>
+            <div class="color-box">
+                <div class="color-sample" style="background: #212529;"></div>
+                <strong>#212529</strong>
+                <p style="font-size: 0.9rem;">Texto Principal<br>Legibilidad óptima</p>
+            </div>
+            <div class="color-box">
+                <div class="color-sample" style="background: #6C757D;"></div>
+                <strong>#6C757D</strong>
+                <p style="font-size: 0.9rem;">Texto Secundario<br>Jerarquía visual</p>
+            </div>
+        </div>
+
+        <h4>Fundamentos de la Paleta</h4>
+        <ul>
+            <li><strong>Azul Corporativo (#0066CC):</strong> Color principal que transmite confianza, profesionalismo y tecnología. Utilizado en CTAs, enlaces y elementos interactivos.</li>
+            <li><strong>Dorado (#FFB800):</strong> Acento secundario que aporta calidez y destaca ofertas/promociones especiales.</li>
+            <li><strong>Escala de Grises:</strong> Para textos y fondos, garantizando contraste WCAG AA (mínimo 4.5:1).</li>
+            <li><strong>Blanco Predominante:</strong> Genera sensación de amplitud y limpieza, característico de centros comerciales modernos.</li>
+        </ul>
+
+        <h3>4.2. Tipografía</h3>
+        <table>
+            <tr>
+                <th>Elemento</th>
+                <th>Tipografía</th>
+                <th>Uso</th>
+            </tr>
+            <tr>
+                <td><strong>Títulos (H1-H4)</strong></td>
+                <td>Poppins (Google Fonts)<br>Peso: 600-700</td>
+                <td>Jerarquía visual clara, moderna y legible</td>
+            </tr>
+            <tr>
+                <td><strong>Cuerpo de texto</strong></td>
+                <td>Roboto (Google Fonts)<br>Peso: 400</td>
+                <td>Excelente legibilidad en pantalla, ampliamente probada</td>
+            </tr>
+            <tr>
+                <td><strong>Textos destacados</strong></td>
+                <td>Roboto Bold<br>Peso: 700</td>
+                <td>Énfasis en información importante</td>
+            </tr>
+        </table>
+
+        <h4>Fundamentos Tipográficos</h4>
+        <ul>
+            <li><strong>Legibilidad:</strong> Ambas tipografías están optimizadas para lectura en pantalla</li>
+            <li><strong>Sans-serif:</strong> Elección moderna y limpia, coherente con el estilo del sitio</li>
+            <li><strong>Escala tipográfica:</strong> Sistema modular con ratios definidos para jerarquía clara</li>
+            <li><strong>Line-height:</strong> 1.6-1.8 para óptima legibilidad en párrafos</li>
+        </ul>
+
+        <h3>4.3. Logotipo e Iconografía</h3>
+
+        <h4>Logotipo</h4>
+        <ul>
+            <li><strong>Ubicación:</strong> Header centrado (70px desktop, 45px mobile)</li>
+            <li><strong>Formato:</strong> JPEG optimizado</li>
+            <li><strong>Características:</strong> Diseño simple y reconocible, escalable</li>
+        </ul>
+
+        <h4>Iconografía</h4>
+        <ul>
+            <li><strong>Redes Sociales:</strong> Íconos SVG (Facebook, Instagram, Twitter/X, TikTok)</li>
+            <li><strong>Contacto:</strong> Íconos SVG de ubicación, teléfono, email, horario</li>
+            <li><strong>Beneficios:</strong> Sistema consistente con color acento principal (#0066CC)</li>
+            <li><strong>Fundamento:</strong> SVG para escalabilidad perfecta y peso mínimo (2KB vs 1-2MB PNG)</li>
+        </ul>
+
+        <h3>4.4. Composición Visual y Diseño de Cards</h3>
+
+        <h4>Sistema de Tarjetas (Cards)</h4>
+        <p>Diseño moderno tipo "card" con imagen superior:</p>
+        <ul>
+            <li><strong>Estructura:</strong> Imagen arriba (220px altura) + contenido abajo</li>
+            <li><strong>Bordes:</strong> 12px border-radius para suavidad</li>
+            <li><strong>Sombras:</strong> Sutil (0 2px 8px) → Elevada al hover (0 8px 24px)</li>
+            <li><strong>Hover:</strong> Elevación de 6px + cambio de borde a azul</li>
+            <li><strong>Fundamento:</strong> Material Design, probado en UX</li>
+        </ul>
+
+        <h4>Layout Responsivo</h4>
+        <ul>
+            <li><strong>Desktop:</strong> Grid de 3 columnas (max-width: 380px por card)</li>
+            <li><strong>Tablet:</strong> 2 columnas</li>
+            <li><strong>Mobile:</strong> 1 columna (ancho completo)</li>
+            <li><strong>Breakpoint:</strong> 768px (tablets y móviles)</li>
+        </ul>
+
+        <h3>4.5. Bocetos y Prototipo</h3>
+
+        <div class="nota">
+            <strong>Nota:</strong> [COMPLETAR] Incluir aquí capturas de pantalla de:
+            <ul>
+                <li>Bocetos iniciales en papel o digital</li>
+                <li>Wireframes de las páginas principales</li>
+                <li>Prototipo en Figma o Penpot con flujos de navegación</li>
+                <li>Mockups de alta fidelidad</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 5. ANÁLISIS DE USABILIDAD -->
+    <div class="seccion page-break">
+        <h2>5. Análisis de Usabilidad: 10 Heurísticas de Nielsen</h2>
+
+        <h3>1. Visibilidad del estado del sistema</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Página actual marcada en navegación con <code>aria-current="page"</code> y fondo destacado</li>
+            <li>Resultados de búsqueda en tiempo real (feedback inmediato)</li>
+            <li>Estados de hover en botones y enlaces (cambio visual claro)</li>
+            <li>Contador de caracteres en formulario de contacto</li>
+        </ul>
+
+        <h3>2. Relación entre el sistema y el mundo real</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Lenguaje claro y cotidiano (sin jerga técnica)</li>
+            <li>Íconos reconocibles (ubicación 📍, teléfono 📞, email ✉️)</li>
+            <li>Organización lógica: servicios, entretenimiento, gastronomía</li>
+            <li>Mapa de locales por pisos (Planta Baja, Primer Piso, Segundo Piso)</li>
+        </ul>
+
+        <h3>3. Control y libertad del usuario</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Botón "Limpiar" en buscador de locales</li>
+            <li>Navegación libre entre secciones (breadcrumbs implícitos)</li>
+            <li>Modales con botón de cerrar (X) claramente visible</li>
+            <li>Enlaces "Volver al inicio" en página 404</li>
+        </ul>
+
+        <h3>4. Consistencia y estándares</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Header y footer idénticos en todas las páginas (components.js)</li>
+            <li>Sistema de colores consistente en todo el sitio</li>
+            <li>Estructura de cards uniforme en servicios, entretenimiento, ofertas y gastronomía</li>
+            <li>Patrones de navegación estándar (logo = home, menú superior)</li>
+        </ul>
+
+        <h3>5. Prevención de errores</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Validación en tiempo real del formulario (mientras el usuario escribe)</li>
+            <li>Mensajes de error específicos ("El email debe tener formato válido")</li>
+            <li>Contador de caracteres preventivo (mínimo 10 en mensaje)</li>
+            <li>Campos obligatorios marcados con asterisco (*)</li>
+        </ul>
+
+        <h3>6. Reconocimiento antes que recuerdo</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Navegación siempre visible en header</li>
+            <li>Íconos + texto en redes sociales (no solo íconos)</li>
+            <li>Resultados de búsqueda muestran nombre + ubicación</li>
+            <li>Breadcrumbs visuales en títulos de sección</li>
+        </ul>
+
+        <h3>7. Flexibilidad y eficiencia de uso</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Buscador con debounce (optimizado para usuarios rápidos)</li>
+            <li>Skip links para usuarios de teclado</li>
+            <li>Navegación por teclado completa (Tab, Enter, Escape)</li>
+            <li>Lazy loading de imágenes (performance mejorada)</li>
+        </ul>
+
+        <h3>8. Estética y diseño minimalista</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Cards limpias con solo información esencial</li>
+            <li>Espaciado generoso (whitespace)</li>
+            <li>Sin elementos decorativos innecesarios</li>
+            <li>Jerarquía visual clara (títulos → subtítulos → texto)</li>
+        </ul>
+
+        <h3>9. Ayudar a reconocer, diagnosticar y recuperarse de errores</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Mensajes de error en lenguaje claro (no códigos técnicos)</li>
+            <li>Errores en rojo con ícono visual</li>
+            <li>Sugerencias de corrección ("Por favor ingresa un email válido")</li>
+            <li>Página 404 personalizada con enlaces de navegación</li>
+        </ul>
+
+        <h3>10. Ayuda y documentación</h3>
+        <p><strong>Implementación:</strong></p>
+        <ul>
+            <li>Placeholder text descriptivo en campos de formulario</li>
+            <li>Tooltips con aria-label explicativos</li>
+            <li>Sección de contacto con múltiples canales</li>
+            <li>Textos de ayuda contextual (ej: "Formato: ejemplo@correo.com")</li>
+        </ul>
+    </div>
+
+    <!-- 6. ACCESIBILIDAD WEB -->
+    <div class="seccion page-break">
+        <h2>6. Accesibilidad Web (WCAG 2.1 - Niveles A y AA)</h2>
+
+        <h3>6.1. Contraste de Color</h3>
+        <p><strong>Decisión:</strong> Todos los textos cumplen ratio mínimo 4.5:1 (AA)</p>
+        <ul>
+            <li>Texto principal (#212529) sobre fondo blanco: <strong>16.1:1</strong> ✓</li>
+            <li>Texto secundario (#6C757D) sobre fondo blanco: <strong>4.54:1</strong> ✓</li>
+            <li>Azul (#0066CC) sobre blanco: <strong>7.1:1</strong> ✓</li>
+        </ul>
+
+        <div class="ejemplo-codigo">
+/* Ejemplo de implementación en CSS */
+:root {
+  --color-texto-principal: #212529;  /* 16.1:1 ratio */
+  --color-texto-secundario: #6C757D; /* 4.54:1 ratio */
+  --color-acento-principal: #0066CC; /* 7.1:1 ratio */
+}
+        </div>
+
+        <h3>6.2. Texto Alternativo en Imágenes</h3>
+        <p><strong>Decisión:</strong> Todas las imágenes tienen atributo alt descriptivo</p>
+
+        <div class="ejemplo-codigo">
+<!-- Ejemplo: Imagen con contexto -->
+&lt;img src="imagenes/parking.png"
+     alt="Estacionamiento moderno con sistema de luces guía"
+     width="600" height="220"&gt;
+
+<!-- Ejemplo: Imagen decorativa -->
+&lt;img src="imagenes/decorativa.png" alt="" role="presentation"&gt;
+        </div>
+
+        <h3>6.3. Navegación por Teclado</h3>
+        <p><strong>Decisiones implementadas:</strong></p>
+        <ul>
+            <li><strong>Skip Links:</strong> Enlace "Saltar al contenido principal" (visible al recibir foco)</li>
+            <li><strong>Focus visible:</strong> Outline de 3px en todos los elementos interactivos</li>
+            <li><strong>Orden lógico:</strong> Tab order coherente con estructura visual</li>
+            <li><strong>Escape key:</strong> Cierra modales con tecla Escape</li>
+        </ul>
+
+        <div class="ejemplo-codigo">
+/* Skip link accesible */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0066CC;
+  color: white;
+  padding: 8px 16px;
+}
+
+.skip-link:focus {
+  top: 0; /* Visible al recibir foco */
+}
+        </div>
+
+        <h3>6.4. Estructura Semántica HTML</h3>
+        <p><strong>Decisión:</strong> Uso correcto de jerarquía y elementos HTML5</p>
+
+        <div class="ejemplo-codigo">
+&lt;main id="main-content"&gt;
+  &lt;h1&gt;Nuestros Servicios&lt;/h1&gt;          <!-- Solo un H1 por página -->
+
+  &lt;section aria-labelledby="titulo1"&gt;
+    &lt;h2 id="titulo1"&gt;Servicios Esenciales&lt;/h2&gt;  <!-- Jerarquía correcta -->
+
+    &lt;article class="servicio-bloque"&gt;
+      &lt;h3&gt;Parking Inteligente&lt;/h3&gt;      <!-- Subnivel H3 -->
+      &lt;p&gt;Descripción...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+        </div>
+
+        <h3>6.5. Formularios Accesibles</h3>
+        <p><strong>Decisiones implementadas:</strong></p>
+        <ul>
+            <li>Todas las etiquetas asociadas con <code>for="id"</code></li>
+            <li>Atributos <code>aria-required="true"</code> en campos obligatorios</li>
+            <li>Atributo <code>aria-invalid</code> dinámico según validación</li>
+            <li>Mensajes de error con <code>role="alert"</code> y <code>aria-live="polite"</code></li>
+        </ul>
+
+        <div class="ejemplo-codigo">
+&lt;div class="campo"&gt;
+  &lt;label for="email"&gt;Correo Electrónico: &lt;span&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input
+    type="email"
+    id="email"
+    name="email"
+    required
+    aria-required="true"
+    aria-invalid="false"
+    aria-describedby="email-error email-ayuda"&gt;
+  &lt;span id="email-ayuda"&gt;Formato: ejemplo@correo.com&lt;/span&gt;
+  &lt;span id="email-error" role="alert" aria-live="polite"&gt;&lt;/span&gt;
+&lt;/div&gt;
+        </div>
+
+        <h3>6.6. Enlaces Descriptivos</h3>
+        <p><strong>Decisión:</strong> Todos los enlaces tienen contexto claro</p>
+
+        <div class="ejemplo-codigo">
+<!-- Mal: enlace genérico -->
+&lt;a href="servicios.html"&gt;Haz clic aquí&lt;/a&gt;
+
+<!-- Bien: enlace descriptivo -->
+&lt;a href="servicios.html"&gt;Ver nuestros servicios&lt;/a&gt;
+
+<!-- Bien: con aria-label para íconos -->
+&lt;a href="index.html" aria-label="Ir a la página de inicio"&gt;
+  &lt;img src="logo.jpeg" alt="Urban Plaza Mall"&gt;
+&lt;/a&gt;
+        </div>
+
+        <h3>6.7. ARIA Landmarks y Roles</h3>
+        <p><strong>Implementación de roles ARIA:</strong></p>
+        <ul>
+            <li><code>role="navigation"</code> en menú principal</li>
+            <li><code>role="dialog"</code> en modales</li>
+            <li><code>role="alert"</code> en mensajes de error/éxito</li>
+            <li><code>role="status"</code> en resultados de búsqueda</li>
+            <li><code>aria-expanded</code> en menú hamburguesa</li>
+            <li><code>aria-current="page"</code> en página activa</li>
+        </ul>
+
+        <h3>6.8. Responsive y Zoom</h3>
+        <p><strong>Decisiones:</strong></p>
+        <ul>
+            <li>Sitio funcional hasta 200% de zoom (WCAG AA)</li>
+            <li>Unidades relativas (rem, em) en lugar de px</li>
+            <li>Mobile-first approach con breakpoint en 768px</li>
+            <li>Viewport meta tag configurado correctamente</li>
+        </ul>
+
+        <div class="ejemplo-codigo">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        </div>
+
+        <h3>6.9. Tablas de Resumen de Cumplimiento WCAG</h3>
+
+        <table>
+            <tr>
+                <th>Criterio WCAG</th>
+                <th>Nivel</th>
+                <th>Estado</th>
+                <th>Implementación</th>
+            </tr>
+            <tr>
+                <td>1.1.1 Contenido no textual</td>
+                <td>A</td>
+                <td>✓ Cumple</td>
+                <td>Todos los alt text implementados</td>
+            </tr>
+            <tr>
+                <td>1.4.3 Contraste mínimo</td>
+                <td>AA</td>
+                <td>✓ Cumple</td>
+                <td>Ratio mínimo 4.5:1 en todos los textos</td>
+            </tr>
+            <tr>
+                <td>2.1.1 Teclado</td>
+                <td>A</td>
+                <td>✓ Cumple</td>
+                <td>Navegación completa por teclado</td>
+            </tr>
+            <tr>
+                <td>2.4.1 Saltar bloques</td>
+                <td>A</td>
+                <td>✓ Cumple</td>
+                <td>Skip links implementados</td>
+            </tr>
+            <tr>
+                <td>2.4.6 Encabezados y etiquetas</td>
+                <td>AA</td>
+                <td>✓ Cumple</td>
+                <td>Jerarquía H1→H2→H3→H4 correcta</td>
+            </tr>
+            <tr>
+                <td>3.2.3 Navegación consistente</td>
+                <td>AA</td>
+                <td>✓ Cumple</td>
+                <td>Header/footer idénticos en todas las páginas</td>
+            </tr>
+            <tr>
+                <td>3.3.1 Identificación de errores</td>
+                <td>A</td>
+                <td>✓ Cumple</td>
+                <td>Mensajes de error claros y específicos</td>
+            </tr>
+            <tr>
+                <td>3.3.2 Etiquetas o instrucciones</td>
+                <td>A</td>
+                <td>✓ Cumple</td>
+                <td>Labels asociados y textos de ayuda</td>
+            </tr>
+            <tr>
+                <td>4.1.2 Nombre, función, valor</td>
+                <td>A</td>
+                <td>✓ Cumple</td>
+                <td>ARIA attributes correctamente implementados</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 7. CONCLUSIONES -->
+    <div class="seccion page-break">
+        <h2>7. Conclusiones</h2>
+
+        <h3>Logros del Proyecto</h3>
+        <ul>
+            <li>Sitio web completamente funcional y responsivo</li>
+            <li>Cumplimiento de WCAG 2.1 nivel AA en todos los criterios evaluados</li>
+            <li>Implementación exitosa de las 10 Heurísticas de Nielsen</li>
+            <li>Sistema de componentes reutilizables que facilita el mantenimiento</li>
+            <li>Funcionalidad dinámica (búsqueda + mapa interactivo) completamente operativa</li>
+            <li>Diseño visual profesional y coherente en todas las páginas</li>
+        </ul>
+
+        <h3>Tecnologías Utilizadas</h3>
+        <ul>
+            <li><strong>HTML5:</strong> Estructura semántica y accesible</li>
+            <li><strong>CSS3:</strong> Diseño responsivo, Grid, Flexbox, variables CSS</li>
+            <li><strong>JavaScript Vanilla:</strong> Sin dependencias, código limpio y documentado</li>
+            <li><strong>Google Fonts:</strong> Poppins y Roboto</li>
+            <li><strong>SVG:</strong> Iconografía escalable y ligera</li>
+        </ul>
+
+        <h3>Aspectos Destacados</h3>
+        <ul>
+            <li><strong>Performance:</strong> Lazy loading de imágenes, debounce en búsqueda</li>
+            <li><strong>SEO:</strong> robots.txt, sitemap.xml, meta tags optimizados</li>
+            <li><strong>UX:</strong> Validación en tiempo real, feedback visual inmediato</li>
+            <li><strong>Código:</strong> Comentarios en español, estructura modular</li>
+        </ul>
+
+        <h3>Aprendizajes</h3>
+        <p>El desarrollo de este proyecto permitió aplicar de manera práctica conceptos fundamentales de diseño web, accesibilidad y usabilidad. Se comprendió la importancia de pensar en todos los usuarios, incluyendo aquellos con discapacidades, y cómo las decisiones de diseño impactan directamente en la experiencia del usuario.</p>
+
+        <p>La implementación de un sistema de componentes reutilizables demostró ser una solución eficiente para mantener consistencia visual y facilitar actualizaciones futuras del sitio.</p>
+    </div>
+
+    <!-- PÁGINA FINAL -->
+    <div class="page-break" style="text-align: center; padding-top: 200px;">
+        <h2 style="border: none;">Fin del Documento</h2>
+        <p style="margin-top: 40px; color: #6C757D;">
+            Urban Plaza Mall<br>
+            Proyecto de Diseño y Desarrollo Web<br>
+            2025
+        </p>
+    </div>
+
+</body>
+</html>

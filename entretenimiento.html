@@ -1,88 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="styles.css">
-     <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
-    <title>Urban Plaza Mall</title>
+    <meta name="description" content="Entretenimiento en Urban Plaza Mall: arcade gaming, realidad virtual, cines boutique, bowling lounge y espacios culturales.">
+    <meta name="keywords" content="entretenimiento, arcade, realidad virtual, cines, bowling, eventos culturales">
+    <meta property="og:title" content="Entretenimiento - Urban Plaza Mall">
+    <meta property="og:description" content="Diversíon sin límites: gaming, VR, cines premium, bowling y eventos culturales. Todo en un solo lugar.">
+    <meta property="og:image" content="imagenes/vr.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Entretenimiento - Urban Plaza Mall</title>
 </head>
 <body>
-  <header>
-    <div class="container header-row">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">☰</button>
-      <h1 class="sp-title reveal">Bienvenidos a Urban Mall Plaza </h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html">Nuestros Servicios</a></li>
-                <li><a href="entretenimiento.html">Entretenimiento</a></li>
-                <li><a href="locales.html">Nuestros Locales</a></li>
-                <li><a href="ofertas.html">Ofertas imperdibles</a></li>
-                <li><a href="gastronomia.html">Nuestra gastronomia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+  <!-- Header se carga automáticamente desde components.js -->
+
+  <main id="main-content">
+    <div class="page-header">
+      <h1>Entretenimiento</h1>
+      <p class="page-subtitle">Diversión, cultura y experiencias únicas para toda la familia</p>
     </div>
-      <div class="seccion-servicios">
-        <h2>Diversion sin fin</h2>
+
+    <section class="seccion-servicios" aria-labelledby="diversion-titulo">
+        <div class="section-title-container">
+          <h2 id="diversion-titulo">Diversión sin Límites</h2>
+          <p class="section-description">Gaming, realidad virtual y experiencias inmersivas</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Arcade y Gaming (Urban Play)</h3>
-                <p>Simuladores de carreras, consolas de última generación y zonas de e-Sports para torneos. Tecnología y adrenalina.</p>
-                <img src="juegos.png" alt="Máquinas Arcade modernas" width="600">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>Espacio de Realidad Virtual (VR)</h3>
-                <p>Experiencias inmersivas con los últimos equipos de VR. Viajes, aventuras y juegos que te sacan de la realidad.</p>
-                <img src="vr.png"Persona usando gafas de realidad virtual width="600">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/juegos.png" alt="Zona de arcade con videojuegos" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Urban Play Arcade</h3>
+                    <p>Simuladores de carreras, consolas de última generación y zonas de e-Sports.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Cines Boutique (Premium)</h3>
-                <p>Salas de cine con asientos reclinables, servicio a la mesa y bares de coctelería para una experiencia de lujo.</p>
-                <img src="cine.png" alt="Sala de cine con asientos reclinables" width="600">
-            </div>
-            
-            <div class="servicio-bloque">
-                <h3>Bowling Lounge</h3>
-                <p>Pistas de bowling con diseño moderno, luces de neón y música de DJ en vivo para el ocio en grupo.</p>
-                <img src="bowling.png" alt="Pista de bowling moderna" width="600">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/vr.png" alt="Realidad virtual" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Realidad Virtual</h3>
+                    <p>Experiencias inmersivas con los últimos equipos de VR y juegos de aventura.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/cine.png" alt="Cine boutique premium" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Cines Boutique</h3>
+                    <p>Salas con asientos reclinables, servicio a la mesa y bares de coctelería.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/bowling.png" alt="Bowling lounge" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Bowling Lounge</h3>
+                    <p>Pistas modernas con luces de neón y música de DJ en vivo.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
 
-    <div class="seccion-servicios">
-        <h2>Espacios Culturales y de Encuentro</h2>
+    <section class="seccion-servicios" aria-labelledby="espacios-culturales">
+        <div class="section-title-container">
+          <h2 id="espacios-culturales">Cultura y Arte</h2>
+          <p class="section-description">Espacios dedicados al arte, la cultura y el emprendimiento</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Galería Pop-Up de Arte</h3>
-                <p>Un espacio que rota exposiciones de artistas de la ciudad (pintura, fotografía, escultura) cada mes. </p>
-                <img src="galeria pop up.png" alt="Exposición de arte en galería" width="600">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>Anfiteatro (The Plaza Stage)</h3>
-                <p>Área para conciertos acústicos, monólogos de comedia y presentaciones culturales en vivo.</p>
-                <img src="anfiteatro.png" alt="Escenario de eventos pequeños" width="600">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/galeria pop up.png" alt="Galería de arte" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Galería Pop-Up</h3>
+                    <p>Exposiciones rotativas de artistas locales: pintura, fotografía y escultura.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Librería/Café de Diseño</h3>
-                <p>Cultura, arquitectura y tendencias en un ambiente tranquilo, integrado con una cafetería de especialidad.</p>
-                <img src="cafe.png" alt="Persona leyendo en una librería-café" width="600">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/anfiteatro.png" alt="Anfiteatro The Plaza Stage" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>The Plaza Stage</h3>
+                    <p>Conciertos acústicos, comedia y presentaciones culturales en vivo.</p>
+                </div>
+            </article>
 
-            <div class ="Plaza del emprendiento">
-                <h3>Plaza del Emprendimiento</h3>
-                <p>Un espacio dedicado a emprendedores locales para exhibir y vender sus productos e incenticvar la economia regional.</p>
-                <img src="emprendimiento.png" alt="Stands de emprendedores en un espacio de mall" width="600">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/cafe.png" alt="Librería café" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Librería Café</h3>
+                    <p>Cultura, arquitectura y tendencias con cafetería de especialidad.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/emprendimiento.png" alt="Plaza del emprendimiento" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h3>Plaza Emprendedora</h3>
+                    <p>Espacio para emprendedores locales que exhiben y venden sus productos.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
+  </main>
+
+  <!-- Footer se carga automáticamente desde components.js -->
+
+  <script src="components.js"></script>
+  <script src="locales-interactivo.js"></script>
+</body>
+</html>

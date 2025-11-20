@@ -1,0 +1,60 @@
+<svg width="600" height="220" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo degradado profesional -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052A3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="600" height="220" fill="url(#bgGradient)"/>
+
+  <!-- Patrón de puntos decorativo -->
+  <circle cx="520" cy="30" r="40" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="70" cy="180" r="50" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="550" cy="160" r="30" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Ícono de notificación/campana -->
+  <g transform="translate(240, 60)">
+    <path d="M60 0C46.7 0 36 10.7 36 24v36c0 6.6-5.4 12-12 12H12c-6.6 0-12 5.4-12 12s5.4 12 12 12h96c6.6 0 12-5.4 12-12s-5.4-12-12-12H96c-6.6 0-12-5.4-12-12V24c0-13.3-10.7-24-24-24z"
+          fill="url(#iconGradient)" transform="scale(0.8)"/>
+    <circle cx="60" cy="110" r="8" fill="#FFB800"/>
+  </g>
+
+  <!-- Ícono de teléfono móvil -->
+  <g transform="translate(80, 70)">
+    <rect x="0" y="0" width="45" height="75" rx="8" fill="rgba(255,255,255,0.95)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+    <rect x="5" y="8" width="35" height="50" rx="3" fill="#E8F4FF"/>
+    <circle cx="22.5" cy="67" r="4" fill="#0066CC"/>
+
+    <!-- Contenido del teléfono -->
+    <rect x="10" y="15" width="25" height="3" rx="1.5" fill="#FFB800"/>
+    <rect x="10" y="22" width="20" height="2" rx="1" fill="#0066CC" opacity="0.4"/>
+    <rect x="10" y="27" width="25" height="2" rx="1" fill="#0066CC" opacity="0.3"/>
+
+    <!-- Etiqueta de descuento -->
+    <circle cx="35" cy="20" r="12" fill="#FF4444"/>
+    <text x="35" y="24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">%</text>
+  </g>
+
+  <!-- Texto principal -->
+  <text x="300" y="130" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">
+    Ofertas Personalizadas
+  </text>
+
+  <!-- Subtexto -->
+  <text x="300" y="155" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.9)" text-anchor="middle">
+    Descuentos exclusivos para ti
+  </text>
+
+  <!-- Elementos decorativos: estrellas de descuento -->
+  <g opacity="0.3">
+    <polygon points="480,90 485,100 495,102 487,109 489,119 480,114 471,119 473,109 465,102 475,100" fill="white"/>
+    <polygon points="510,120 513,125 518,126 514,130 515,135 510,132 505,135 506,130 502,126 507,125" fill="white"/>
+  </g>
+</svg>

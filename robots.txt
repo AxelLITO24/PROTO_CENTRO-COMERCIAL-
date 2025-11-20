@@ -1,0 +1,21 @@
+# robots.txt para Urban Plaza Mall
+User-agent: *
+Allow: /
+
+# Páginas principales
+Allow: /index.html
+Allow: /servicios.html
+Allow: /entretenimiento.html
+Allow: /locales-mejorado.html
+Allow: /ofertas.html
+Allow: /gastronomia.html
+Allow: /contacto.html
+
+# Archivos estáticos
+Allow: /imagenes/
+Allow: /videos/
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap
+Sitemap: https://urbanplazamall.com/sitemap.xml

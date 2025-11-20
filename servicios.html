@@ -1,103 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios exclusivos en Urban Plaza Mall: parking inteligente, Wi-Fi gratuito, programas de lealtad y más comodidades.">
+    <meta name="keywords" content="servicios mall, parking inteligente, wifi gratis, urban pass, beneficios shopping">
+    <meta property="og:title" content="Servicios - Urban Plaza Mall">
+    <meta property="og:description" content="Descubrí todos los servicios exclusivos que tenemos para vos: parking inteligente, WiFi gratis, Urban Pass y mucho más.">
+    <meta property="og:image" content="imagenes/wifi.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
-    <title>Urban Plaza Mall</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Servicios - Urban Plaza Mall</title>
 </head>
 <body>
-  <header>
-    <div class="container header-row">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">☰</button>
-      <h1 class="sp-title reveal">Conoce todos Nuestros servicios</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html">Nuestros Servicios</a></li>
-                <li><a href="entretenimiento.html">Entretenimiento</a></li>
-                <li><a href="locales.html">Nuestros Locales</a></li>
-                <li><a href="ofertas.html">Ofertas imperdibles</a></li>
-                <li><a href="gastronomia.html">Nuestra gastronomia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-        <h1>Servicios Exclusivos de Urban Plaza Mall</h1>
-    <hr>
+  <!-- Header se carga automáticamente desde components.js -->
 
-    <div class="seccion-servicios">
-        <h2>🅿️ Servicios Esenciales y Comodidades</h2>
+  <main id="main-content">
+    <div class="page-header">
+      <h1>Nuestros Servicios</h1>
+      <p class="page-subtitle">Experiencias y comodidades diseñadas para tu bienestar</p>
+    </div>
+
+    <section class="seccion-servicios" aria-labelledby="servicios-esenciales">
+        <div class="section-title-container">
+          <h2 id="servicios-esenciales">Servicios Esenciales</h2>
+          <p class="section-description">Comodidades que hacen tu visita más placentera</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Parking Inteligente</h3>
-                <p>Amplio estacionamiento subterráneo con guía digital de plazas libres y pago móvil vía app. ¡Cero estrés al aparcar!</p>
-                <img src="parcking.png" alt="Parking Inteligente con luces guía" width="600">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>Wi-Fi de Alta Velocidad Gratuito</h3>
-                <p>Red robusta y gratuita en todo el mall para compras, trabajo o compartir tus momentos al instante.</p>
-                <img src="wifi.png" alt="Icono de Wi-Fi rápido" width="600">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/parcking.png" alt="Estacionamiento moderno con sistema de luces guía" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Parking Inteligente</h4>
+                    <p>Estacionamiento con guía digital de plazas libres y pago móvil vía app.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Servicio "Manos Libres" y Concierge Digital</h3>
-                <p>Consignas automatizadas para guardar tus compras. Disfruta el paseo sin cargar ni una sola bolsa. Ademas ofrecemos Un punto de información o chat/app para consultas rápidas sobre tiendas, eventos y horarios.</p>
-                <img src="lockers.png" alt="Lockers de almacenamiento automático" width="600">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/wifi.png" alt="Conexión Wi-Fi de alta velocidad" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Wi-Fi Gratuito</h4>
+                    <p>Red de alta velocidad en todo el mall para navegar, trabajar o compartir.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/lockers.png" alt="Lockers automáticos para compras" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Servicio Manos Libres</h4>
+                    <p>Consignas automatizadas para guardar tus compras y disfrutar sin cargar bolsas.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
 
-    <div class="seccion-servicios">
-        <h2>✨ Beneficios y Programas de Lealtad</h2>
+    <section class="seccion-servicios" aria-labelledby="beneficios-lealtad">
+        <div class="section-title-container">
+          <h2 id="beneficios-lealtad">Beneficios y Lealtad</h2>
+          <p class="section-description">Recompensas exclusivas para nuestros clientes frecuentes</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Tarjeta de Lealtad "Urban Pass"</h3>
-                <p>Acumula puntos con cada compra y canjéalos por horas de parking gratis o descuentos exclusivos.</p>
-                <img src="urban pass.png" alt="Tarjeta de lealtad moderna" width="600">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>Ofertas Exclusivas Personalizadas</h3>
-                <p>Notificaciones push con descuentos basados en tus gustos e historial de compras. ¡Hecho para ti!</p>
-                <img src="ofertas.jpg" alt="Icono de descuento en un móvil" width="600">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/urban pass.png" alt="Tarjeta Urban Pass" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Urban Pass</h4>
+                    <p>Acumulá puntos con cada compra y canjealos por parking gratis o descuentos exclusivos.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/ofertas-placeholder.svg" alt="Ofertas personalizadas" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Ofertas Personalizadas</h4>
+                    <p>Recibí notificaciones con descuentos basados en tus gustos y preferencias.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
 
-    <div class="seccion-servicios">
-        <h2>🎨 Actividades y Ocio (El "Plaza" en Urban Plaza)</h2>
+    <section class="seccion-servicios" aria-labelledby="actividades-ocio">
+        <div class="section-title-container">
+          <h2 id="actividades-ocio">Espacios y Experiencias</h2>
+          <p class="section-description">Lugares únicos para disfrutar y relajarte</p>
+        </div>
         
         <div class="contenedor-flex">
-            
-            <div class="servicio-bloque">
-                <h3>Gastronomía Urbana (Food Hall)</h3>
-                <p>Área moderna con stands de chefs y opciones gourmet, con ambiente chic y mesas comunes.</p>
-                <img src="gastro.png" alt="Vista de un Food Hall moderno" width="600">
-            </div>
 
-            <div class="servicio-bloque">
-                <h3>Espacios para Eventos Pop-Up</h3>
-                <p>Ferias de arte, mercados de diseñadores locales y presentaciones de productos tecnológicos innovadores.</p>
-                <img src="pop-up.png" alt="Evento pop-up en una tienda" width="600">
-            </div>
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/gastro.png" alt="Food Hall con opciones gastronómicas" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Food Hall</h4>
+                    <p>Área gastronómica moderna con stands de chefs y opciones gourmet.</p>
+                </div>
+            </article>
 
-            <div class="servicio-bloque">
-                <h3>Terrazas y Jardines con Ocio</h3>
-                <p>Zonas al aire libre con mobiliario cómodo, ideales para pausas y el mejor ambiente after-office.</p>
-                <img src="patio.png" alt="Terraza de mall con plantas" width="600">
-            </div>
-            
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/pop-up.png" alt="Eventos pop-up" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Eventos Pop-Up</h4>
+                    <p>Ferias de arte, mercados de diseñadores locales y lanzamientos de productos.</p>
+                </div>
+            </article>
+
+            <article class="servicio-bloque">
+                <img loading="lazy" src="imagenes/patio.png" alt="Terrazas y jardines" width="600" height="220">
+                <div class="servicio-contenido">
+                    <h4>Terrazas & Jardines</h4>
+                    <p>Espacios al aire libre con mobiliario cómodo, ideales para descansar.</p>
+                </div>
+            </article>
+
         </div>
-    </div>
+    </section>
+  </main>
 
+  <!-- Footer se carga automáticamente desde components.js -->
+
+  <script src="components.js"></script>
+  <script src="locales-interactivo.js"></script>
 </body>
 </html>
