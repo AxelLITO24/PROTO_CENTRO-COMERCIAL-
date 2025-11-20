@@ -160,6 +160,9 @@ function cargarComponentes() {
 
   // Llamar a la función que resalta la página actual en el menú
   marcarPaginaActual();
+
+  // Inicializar funcionalidad del menú hamburguesa
+  inicializarMenuHamburguesa();
 }
 
 // ============================================
@@ -191,6 +194,74 @@ function marcarPaginaActual() {
     if (enlace.getAttribute('href') === paginaActual) {
       // Marcarlo como página actual (esto aplica estilos CSS especiales)
       enlace.setAttribute('aria-current', 'page');
+    }
+  });
+}
+
+// ============================================
+// FUNCIÓN: MENÚ HAMBURGUESA MÓVIL
+// ============================================
+/**
+ * Inicializa la funcionalidad del menú hamburguesa para dispositivos móviles
+ *
+ * CÓMO FUNCIONA:
+ * 1. Detecta el click en el botón hamburguesa
+ * 2. Alterna entre abrir y cerrar el menú
+ * 3. Cambia el icono del botón (hamburguesa ↔ X)
+ * 4. Cierra el menú al hacer click en un enlace
+ */
+function inicializarMenuHamburguesa() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('nav a');
+
+  // Si no existe el botón hamburguesa, salir de la función
+  if (!navToggle || !nav) return;
+
+  // Manejar click en el botón hamburguesa
+  navToggle.addEventListener('click', function() {
+    const estaAbierto = this.getAttribute('aria-expanded') === 'true';
+
+    // Alternar estado
+    this.setAttribute('aria-expanded', !estaAbierto);
+    nav.classList.toggle('nav-abierto');
+
+    // Prevenir scroll del body cuando el menú está abierto
+    if (!estaAbierto) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Cerrar menú al hacer click en cualquier enlace
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navToggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('nav-abierto');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Cerrar menú al hacer click fuera de él
+  document.addEventListener('click', function(event) {
+    const clickDentroNav = nav.contains(event.target);
+    const clickEnBoton = navToggle.contains(event.target);
+    const menuAbierto = nav.classList.contains('nav-abierto');
+
+    if (!clickDentroNav && !clickEnBoton && menuAbierto) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('nav-abierto');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Cerrar menú al cambiar tamaño de ventana (de móvil a desktop)
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('nav-abierto');
+      document.body.style.overflow = '';
     }
   });
 }
