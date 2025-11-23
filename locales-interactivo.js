@@ -38,15 +38,17 @@ const localesData = {
         nombre: 'Gamer Pro, PC Gamers',
         descripcion: 'La meca del hardware. Venta y armado de PCs de alto rendimiento, periféricos de última generación y accesorios e-Sports.',
         ubicacion: 'Planta Baja - Local 1',
-        imagen: 'imagenes/gamer_pro.jpg',
-        categoria: 'tecnologia'
+        imagen: 'imagenes/logos/gamerPro.png',
+        categoria: 'tecnologia',
+        url: "https://axellito24.github.io/2da-entrega/"
     },
     'hermes-gear': {
         nombre: 'Tecnología Hermes Gear',
         descripcion: 'Gadgets, dispositivos móviles y wearables inteligentes de las marcas más exclusivas. Lo último en conectividad.',
         ubicacion: 'Planta Baja - Local 2',
-        imagen: 'imagenes/hermes_gear.jpg',
-        categoria: 'tecnologia'
+        imagen: 'imagenes/logos/hermes.png',
+        categoria: 'tecnologia',
+        url: "https://jhonem.github.io/ladingHermes/"
     },
     'collective': {
         nombre: 'The Collective (Moda)',
@@ -66,8 +68,9 @@ const localesData = {
         nombre: 'Pastelería Belle Epoque',
         descripcion: 'Pastelería artesanal de lujo. Repostería fina, chocolates y macarons, perfectos para un café con estilo.',
         ubicacion: 'Primer Piso - Local 5',
-        imagen: 'imagenes/belle_epoque.jpg',
-        categoria: 'gastronomia'
+        imagen: 'imagenes/logos/belle.png',
+        categoria: 'gastronomia',
+        url: "https://euge-90.github.io/belle-epoque-pasteleria/"
     },
     'green-life': {
         nombre: 'Green Life Market',
@@ -76,12 +79,13 @@ const localesData = {
         imagen: 'imagenes/green_life.jpg',
         categoria: 'alimentacion'
     },
-    'home-co': {
-        nombre: 'Home & Co (Diseño Interior)',
-        descripcion: 'Mobiliario minimalista, objetos de diseño escandinavo y decoración moderna para embellecer cualquier espacio urbano.',
+    'conceptBA': {
+        nombre: '.ConceptBA ',
+        descripcion: 'Muebles y Decoración, productos que embellecen los espacios y cuentan historias.',
         ubicacion: 'Primer Piso - Local 7',
-        imagen: 'imagenes/home_co.jpg',
-        categoria: 'hogar'
+        imagen: 'imagenes/logos/conceptBA.png',
+        categoria: 'hogar',
+        url: "https://jupuiguade.github.io/ConceptBA_TP_Individual"
     },
     'barber-club': {
         nombre: 'The Barber Club',
@@ -315,6 +319,7 @@ const modalImagen = document.getElementById('modal-imagen');
 const modalDescripcion = document.getElementById('modal-descripcion');
 const modalUbicacion = document.getElementById('modal-ubicacion');
 const modalCerrar = document.querySelector('.modal-cerrar');
+const modalLink = document.getElementById('modal-link')
 
 // Agregar evento click a todos los botones del mapa de locales
 document.querySelectorAll('.local-mapa').forEach(boton => {
@@ -348,6 +353,16 @@ function mostrarModal(local) {
     modalImagen.alt = 'Vista del local ' + local.nombre;
     modalDescripcion.textContent = local.descripcion;
     modalUbicacion.innerHTML = '<strong>Ubicación:</strong> ' + local.ubicacion;
+
+    if (local.url) {
+        $(modalLink).attr('href', local.url);
+        $(modalLink).css('cursor', 'pointer');
+        $(modalLink).css('pointer-events', 'auto');
+    } else {
+        $(modalLink).removeAttr('href');
+        $(modalLink).css('cursor', 'default'); // Cursor flecha normal
+        $(modalLink).css('pointer-events', 'none');
+    }
 
     // Mostrar el modal
     modal.hidden = false;
@@ -450,9 +465,9 @@ if (skipLink) {
  * Mensajes en la consola del navegador (solo para desarrollo)
  * Puedes verlos presionando F12 > Consola
  */
-console.log('%c Urban Plaza Mall ', 'background: #0066CC; color: #FFFFFF; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Sistema de búsqueda y mapa interactivo cargado correctamente ', 'color: #0066CC; font-size: 12px;');
-console.log('%c Todas las funcionalidades están operativas ', 'color: #28A745; font-size: 10px;');
+// console.log('%c Urban Plaza Mall ', 'background: #0066CC; color: #FFFFFF; font-size: 20px; font-weight: bold; padding: 10px;');
+// console.log('%c Sistema de búsqueda y mapa interactivo cargado correctamente ', 'color: #0066CC; font-size: 12px;');
+// console.log('%c Todas las funcionalidades están operativas ', 'color: #28A745; font-size: 10px;');
 
 // ============================================
 // MONITOREO DE RENDIMIENTO (OPCIONAL)

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Encuentra todos los locales comerciales de Urban Plaza Mall">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap">
     <title>Locales Comerciales - Urban Plaza Mall</title>
 </head>
@@ -53,8 +53,8 @@
                         <button class="local-mapa" data-local="green-life" aria-label="Ver información de Green Life Market">
                             <span class="local-numero">6</span><span class="local-nombre">Green Life</span>
                         </button>
-                        <button class="local-mapa" data-local="home-co" aria-label="Ver información de Home & Co">
-                            <span class="local-numero">7</span><span class="local-nombre">Home & Co</span>
+                        <button class="local-mapa" data-local="conceptBA" aria-label="Ver información de .ConceptBA">
+                            <span class="local-numero">7</span><span class="local-nombre">.ConceptBA</span>
                         </button>
                         <button class="local-mapa" data-local="barber-club" aria-label="Ver información de The Barber Club">
                             <span class="local-numero">8</span><span class="local-nombre">Barber Club</span>
@@ -81,7 +81,7 @@
             <div class="modal-contenido">
                 <button class="modal-cerrar" aria-label="Cerrar información del local"></button>
                 <h3 id="modal-titulo"></h3>
-                <img id="modal-imagen" src="" alt=""/>
+                <a href="" id="modal-link" target="_blank"><img id="modal-imagen" src="" alt=""/></a>
                 <p id="modal-descripcion"></p>
                 <p id="modal-ubicacion"></p>
             </div>
@@ -91,7 +91,10 @@
 
   <!-- Footer se carga automáticamente desde components.js -->
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="components.js"></script>
   <script src="locales-interactivo.js"></script>
+  <script src="js/db-chat.js"></script>
+  <script src="js/logic-chat.js"></script>
 </body>
 </html>
