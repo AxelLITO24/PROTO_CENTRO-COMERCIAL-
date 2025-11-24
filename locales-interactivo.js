@@ -54,7 +54,7 @@ const localesData = {
         nombre: 'The Collective (Moda)',
         descripcion: 'Concept Store multimarca. Prendas de diseñadores emergentes y colecciones de moda urbana y vanguardista.',
         ubicacion: 'Planta Baja - Local 3',
-        imagen: 'https://github.com/AxelLITO24/PROTO_CENTRO-COMERCIAL-/blob/main/imagenes/collective_fashion.png',
+        imagen: 'imagenes/collective_fashion.png',
         categoria: 'moda'
     },
     'studio-fit': {
