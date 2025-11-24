@@ -105,7 +105,7 @@ const localesData = {
         nombre: "Pet's Urban Spa",
         descripcion: 'Tienda y spa para mascotas. Productos orgánicos, accesorios de diseño y servicios de peluquería y bienestar canino/felino.',
         ubicacion: 'Segundo Piso - Local 10',
-        imagen: 'imagenes/pets_spa.jpg',
+        imagen: 'imagenes/pets_spa.png',
         categoria: 'mascotas'
     },
     'travel-hub': {
