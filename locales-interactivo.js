@@ -76,7 +76,7 @@ const localesData = {
         nombre: 'Green Life Market',
         descripcion: 'Tienda de productos orgánicos, suplementos, alimentos plant-based y jugos naturales. El lado saludable del urbanismo.',
         ubicacion: 'Primer Piso - Local 6',
-        imagen: 'imagenes/green_life.jpg',
+        imagen: 'imagenes/green_life.png',
         categoria: 'alimentacion'
     },
     'conceptBA': {
@@ -91,7 +91,7 @@ const localesData = {
         nombre: 'The Barber Club',
         descripcion: 'Barbería premium con estilo vintage. Cortes, afeitados clásicos y venta de productos de cuidado masculino exclusivo.',
         ubicacion: 'Primer Piso - Local 8',
-        imagen: 'imagenes/barber_club.jpg',
+        imagen: 'imagenes/barber_club.png',
         categoria: 'servicios'
     },
     'vision-total': {
@@ -112,7 +112,7 @@ const localesData = {
         nombre: 'Travel Hub (Agencia Boutique)',
         descripcion: 'Agencia de viajes especializada en experiencias de lujo, destinos exóticos y escapadas de fin de semana con estilo.',
         ubicacion: 'Segundo Piso - Local 11',
-        imagen: 'imagenes/travel_hub.jpg',
+        imagen: 'imagenes/travel_hub.png',
         categoria: 'servicios'
     }
 };
