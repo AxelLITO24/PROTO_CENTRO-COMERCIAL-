@@ -39,6 +39,46 @@
     --gradiente-fondo: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
 }
 
+/* ========================================
+   MODO OSCURO
+   ======================================== */
+[data-theme="dark"] {
+    /* Fondos oscuros */
+    --color-fondo: #1a1a1a;
+    --color-fondo-secundario: #2d2d2d;
+    --color-fondo-card: #242424;
+    --color-fondo-hover: #353535;
+
+    /* Textos claros */
+    --color-texto-principal: #e8e8e8;
+    --color-texto-secundario: #b0b0b0;
+    --color-texto-claro: #a0a0a0;
+
+    /* Acentos ajustados para oscuro */
+    --color-acento-principal: #3d8bfd;
+    --color-acento-hover: #5c9fff;
+    --color-acento-secundario: #ffc107;
+    --color-acento-terciario: #3d8bfd;
+
+    /* Estados */
+    --color-error: #ff4d5a;
+    --color-exito: #51cf66;
+    --color-warning: #ffc107;
+    --color-info: #22b8cf;
+
+    /* Bordes y sombras oscuras */
+    --color-borde: #404040;
+    --color-borde-hover: #505050;
+    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --sombra-grande: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    /* Gradientes para oscuro */
+    --gradiente-principal: linear-gradient(135deg, #3d8bfd 0%, #2a6fd8 100%);
+    --gradiente-hover: linear-gradient(135deg, #5c9fff 0%, #3d8bfd 100%);
+    --gradiente-fondo: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
 /* Reseteo básico */
 * {
     margin: 0;
@@ -208,6 +248,7 @@ header:hover {
     padding-top: 20px;
     padding-bottom: 15px;
     min-height: 85px;
+    position: relative;
 }
 
 /* Logo profesional */
@@ -235,6 +276,10 @@ header:hover {
 nav {
     display: flex;
     align-items: center;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul {
@@ -337,6 +382,80 @@ nav a[aria-current="page"]::after {
 
 .nav-toggle[aria-expanded="true"] span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========================================
+   THEME TOGGLE BUTTON (Modo Oscuro/Claro)
+   ======================================== */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--color-acento-principal);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--color-acento-principal);
+    padding: 8px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* Hide mobile toggle on desktop */
+.theme-toggle-mobile {
+    display: none;
+}
+
+.theme-toggle:hover {
+    background: var(--color-acento-principal);
+    color: white;
+    transform: scale(1.05);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Icono de sol (modo claro) */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+/* Cuando está en modo oscuro, mostrar sol */
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+/* Animación suave de cambio de tema */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header,
+footer,
+.servicio-bloque,
+.local-mapa,
+.footer-content,
+button,
+input,
+textarea {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Main content */
@@ -1159,7 +1278,7 @@ main {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 0;
+        gap: 10px;
         position: relative;
     }
 
@@ -1186,6 +1305,25 @@ main {
         z-index: 1002;
     }
 
+    /* Theme toggle en móvil - a la derecha, visible siempre */
+    nav .theme-toggle {
+        display: none;
+    }
+
+    .theme-toggle-mobile {
+        display: flex !important;
+        order: 3;
+        z-index: 1002;
+    }
+
+    .theme-toggle-mobile:hover {
+        transform: scale(1.05);
+    }
+
+    .theme-toggle-mobile:active {
+        transform: scale(0.95);
+    }
+
     /* Navegación móvil */
     nav {
         display: none;
@@ -1200,6 +1338,9 @@ main {
         order: 2;
         overflow-y: auto;
         animation: slideDown 0.3s ease-out;
+        flex: none;
+        justify-content: flex-start;
+        width: auto;
     }
 
     @keyframes slideDown {

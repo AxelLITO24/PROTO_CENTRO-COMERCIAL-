@@ -24,8 +24,6 @@
 // ============================================
 // Contiene: Logo, botón hamburguesa y navegación principal
 const headerHTML = `
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-
   <header>
     <div class="header-container">
       <a href="index.html" class="logo-link" aria-label="Ir a la página de inicio - Urban Plaza Mall">
@@ -48,7 +46,25 @@ const headerHTML = `
           <li><a href="gastronomia.html">Gastronomía</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema" title="Cambiar entre modo claro y oscuro">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM13 2h-2v3h2V2zm0 17h-2v3h2v-3zM5 11H2v2h3v-2zm17 0h-3v2h3v-2zm-2.9-7.1L17.7 5.3l1.4 1.4 1.4-1.4-1.4-1.4zM5.3 17.7l-1.4 1.4 1.4 1.4 1.4-1.4-1.4-1.4zm12.4 1.4l1.4-1.4-1.4-1.4-1.4 1.4 1.4 1.4zM6.7 6.7L5.3 5.3 3.9 6.7l1.4 1.4 1.4-1.4z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+          </svg>
+        </button>
       </nav>
+
+      <button class="theme-toggle theme-toggle-mobile" aria-label="Cambiar tema" title="Cambiar entre modo claro y oscuro">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM13 2h-2v3h2V2zm0 17h-2v3h2v-3zM5 11H2v2h3v-2zm17 0h-3v2h3v-2zm-2.9-7.1L17.7 5.3l1.4 1.4 1.4-1.4-1.4-1.4zM5.3 17.7l-1.4 1.4 1.4 1.4 1.4-1.4-1.4-1.4zm12.4 1.4l1.4-1.4-1.4-1.4-1.4 1.4 1.4 1.4zM6.7 6.7L5.3 5.3 3.9 6.7l1.4 1.4 1.4-1.4z"/>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+      </button>
     </div>
   </header>
 `;
@@ -163,6 +179,9 @@ function cargarComponentes() {
 
   // Inicializar funcionalidad del menú hamburguesa
   inicializarMenuHamburguesa();
+
+  // Inicializar tema oscuro/claro
+  inicializarTema();
 }
 
 // ============================================
@@ -269,6 +288,53 @@ function inicializarMenuHamburguesa() {
       document.body.style.overflow = '';
     }
   });
+}
+
+// ============================================
+// FUNCIÓN: TEMA OSCURO/CLARO
+// ============================================
+
+function inicializarTema() {
+  const themeToggles = document.querySelectorAll('.theme-toggle, .theme-toggle-mobile');
+  
+  if (!themeToggles.length) return;
+
+  const temaGuardado = localStorage.getItem('theme');
+  const preferenciaSistema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const temaInicial = temaGuardado || preferenciaSistema;
+
+  aplicarTema(temaInicial);
+
+  // Agregar evento click a todos los botones de tema
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const temaActual = document.documentElement.getAttribute('data-theme');
+      const nuevoTema = temaActual === 'dark' ? 'light' : 'dark';
+      aplicarTema(nuevoTema);
+      localStorage.setItem('theme', nuevoTema);
+    });
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      aplicarTema(e.matches ? 'dark' : 'light');
+    }
+  });
+}
+
+/**
+ * Aplica el tema especificado al documento
+ * @param {string} tema - 'light' o 'dark'
+ */
+function aplicarTema(tema) {
+  document.documentElement.setAttribute('data-theme', tema);
+  
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    const nuevoLabel = tema === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+    themeToggle.setAttribute('aria-label', nuevoLabel);
+    themeToggle.setAttribute('title', nuevoLabel);
+  }
 }
 
 // ============================================
