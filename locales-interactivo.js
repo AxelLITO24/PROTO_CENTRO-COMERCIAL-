@@ -61,7 +61,7 @@ const localesData = {
         nombre: 'Studio Fit (Deportes)',
         descripcion: 'Ropa deportiva técnica y calzado de alto rendimiento, enfocado en running, yoga y entrenamiento funcional.',
         ubicacion: 'Planta Baja - Local 4',
-        imagen: 'imagenes/studio_fit.jpg',
+        imagen: 'imagenes/studio_fit.png',
         categoria: 'deportes'
     },
     'belle-epoque': {
