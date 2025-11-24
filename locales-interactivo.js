@@ -98,7 +98,7 @@ const localesData = {
         nombre: 'Óptica Visión Total',
         descripcion: 'Venta de lentes de contacto, exámenes visuales y colecciones exclusivas de gafas de sol de diseñador.',
         ubicacion: 'Segundo Piso - Local 9',
-        imagen: 'imagenes/vision_total.jpg',
+        imagen: 'imagenes/vision_total.png',
         categoria: 'salud'
     },
     'pets-spa': {
