@@ -12,7 +12,7 @@
     /* Textos */
     --color-texto-principal: #212529;
     --color-texto-secundario: #6C757D;
-    --color-texto-claro: #868E96;
+    --color-texto-claro: #5A6268;
 
     /* Acentos principales */
     --color-acento-principal: #0066CC;
@@ -469,7 +469,7 @@ img[loading="lazy"] {
     border-color: var(--color-acento-principal);
 }
 
-.caracteristica h3 {
+.caracteristica h2 {
     font-size: 1.5rem;
     color: var(--color-texto-principal);
     margin-bottom: 12px;
@@ -689,6 +689,12 @@ textarea {
     box-sizing: border-box;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: #6C757D;
+    opacity: 1;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -714,7 +720,7 @@ textarea[aria-invalid="true"] {
 .ayuda-texto {
     display: block;
     font-size: 0.875rem;
-    color: var(--color-texto-claro);
+    color: #495057;
     margin-top: 6px;
 }
 
@@ -945,8 +951,8 @@ button:focus {
 
 /* Footer profesional */
 footer {
-    background: #F8F9FA;
-    color: var(--color-texto-secundario);
+    background: #2C3E50;
+    color: #FFFFFF;
     text-align: center;
     padding: 60px 20px 30px;
     margin-top: 100px;
@@ -956,6 +962,7 @@ footer {
 footer p {
     margin: 10px 0;
     font-size: 0.95rem;
+    color: #E8E8E8;
 }
 
 .footer-content {
@@ -969,14 +976,14 @@ footer p {
 }
 
 .footer-section h3 {
-    color: var(--color-texto-principal);
+    color: #FFFFFF;
     margin-bottom: 24px;
     font-size: 1.125rem;
     font-weight: 600;
 }
 
 .footer-section p {
-    color: var(--color-texto-secundario);
+    color: #E8E8E8;
     line-height: 1.7;
 }
 
@@ -994,18 +1001,18 @@ footer p {
 
 .footer-section ul li svg {
     flex-shrink: 0;
-    color: var(--color-acento-principal);
+    color: #5DADE2;
 }
 
 .footer-section a {
-    color: var(--color-texto-secundario);
+    color: #E8E8E8;
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-block;
 }
 
 .footer-section a:hover {
-    color: var(--color-acento-principal);
+    color: #5DADE2;
 }
 
 .social-icons {
@@ -1020,11 +1027,11 @@ footer p {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--color-fondo);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    border: 2px solid var(--color-borde);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
-    color: var(--color-texto-secundario);
+    color: #FFFFFF;
 }
 
 .social-icons a svg {
@@ -1034,17 +1041,17 @@ footer p {
 }
 
 .social-icons a:hover {
-    background: var(--color-acento-principal);
-    border-color: var(--color-acento-principal);
+    background: #5DADE2;
+    border-color: #5DADE2;
     transform: translateY(-3px);
-    box-shadow: var(--sombra-media);
+    box-shadow: 0 4px 12px rgba(93, 173, 226, 0.4);
     color: #FFFFFF;
 }
 
 .footer-bottom {
     padding-top: 32px;
-    border-top: 1px solid var(--color-borde);
-    color: var(--color-texto-claro);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #B8B8B8;
     font-size: 0.875rem;
 }
 
@@ -1402,7 +1409,7 @@ main {
         padding: 24px 20px;
     }
 
-    .caracteristica h3 {
+    .caracteristica h2 {
         font-size: 1.25rem;
     }
 

@@ -180,6 +180,7 @@ function cargarComponentes() {
  * 2. Busca todos los enlaces del menú
  * 3. Encuentra el que apunta a la página actual
  * 4. Le agrega el atributo aria-current="page" para marcarlo
+ * 5. Elimina el href para evitar enlaces redundantes (accesibilidad)
  */
 function marcarPaginaActual() {
   // Obtener el nombre del archivo actual (ej: "contacto.html")
@@ -194,6 +195,10 @@ function marcarPaginaActual() {
     if (enlace.getAttribute('href') === paginaActual) {
       // Marcarlo como página actual (esto aplica estilos CSS especiales)
       enlace.setAttribute('aria-current', 'page');
+      // Eliminar href para que no sea clickable y evitar enlaces redundantes
+      enlace.removeAttribute('href');
+      // Mantener apariencia de enlace pero sin funcionalidad
+      enlace.style.cursor = 'default';
     }
   });
 }
