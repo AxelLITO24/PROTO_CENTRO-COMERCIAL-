@@ -300,8 +300,7 @@ function inicializarTema() {
   if (!themeToggles.length) return;
 
   const temaGuardado = localStorage.getItem('theme');
-  const preferenciaSistema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const temaInicial = temaGuardado || preferenciaSistema;
+  const temaInicial = temaGuardado || 'light';
 
   aplicarTema(temaInicial);
 
