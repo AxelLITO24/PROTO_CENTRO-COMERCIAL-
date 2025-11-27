@@ -967,6 +967,47 @@ button:focus {
     font-style: italic;
 }
 
+/* Filtro por categoría */
+.filtro-categoria-container {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.filtro-categoria-container label {
+    font-weight: 600;
+    color: var(--color-texto-principal);
+}
+
+#filtro-categoria {
+    padding: 12px 20px;
+    border: 2px solid var(--color-acento-principal);
+    border-radius: 8px;
+    background: var(--color-fondo);
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 200px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#filtro-categoria:hover {
+    border-color: var(--color-hover);
+}
+
+#filtro-categoria:focus {
+    outline: none;
+    border-color: var(--color-acento-principal);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.3);
+}
+
+.filtrado-oculto {
+    display: none !important;
+}
+
 /* Mapa interactivo */
 .mapa-container {
     background: rgba(73, 80, 87, 0.3);

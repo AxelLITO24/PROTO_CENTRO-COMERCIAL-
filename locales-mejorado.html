@@ -20,6 +20,21 @@
             <span id="buscar-ayuda" class="sr-only">Escribe el nombre del local para buscarlo en tiempo real</span>
             <button type="button" id="btn-limpiar" aria-label="Limpiar búsqueda"></button>
         </div>
+        <div class="filtro-categoria-container">
+            <label for="filtro-categoria">Filtrar por categoría:</label>
+            <select id="filtro-categoria" aria-label="Filtrar locales por categoría">
+                <option value="todas">Todas las categorías</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="moda">Moda</option>
+                <option value="deportes">Deportes</option>
+                <option value="gastronomia">Gastronomía</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="hogar">Hogar y Decoración</option>
+                <option value="servicios">Servicios</option>
+                <option value="salud">Salud y Óptica</option>
+                <option value="mascotas">Mascotas</option>
+            </select>
+        </div>
         <div id="resultado-busqueda" role="status" aria-live="polite" aria-atomic="true"></div>
     </section>
 
@@ -84,6 +99,8 @@
                 <a href="" id="modal-link" target="_blank"><img id="modal-imagen" src="" alt="Imagen del local"/></a>
                 <p id="modal-descripcion"></p>
                 <p id="modal-ubicacion"></p>
+                <p id="modal-horario"></p>
+                <p id="modal-telefono"></p>
             </div>
         </div>
     </section>

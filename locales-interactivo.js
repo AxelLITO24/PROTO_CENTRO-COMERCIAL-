@@ -40,7 +40,9 @@ const localesData = {
         ubicacion: 'Planta Baja - Local 1',
         imagen: 'imagenes/logos/gamerPro.png',
         categoria: 'tecnologia',
-        url: "https://axellito24.github.io/2da-entrega/"
+        url: "https://axellito24.github.io/2da-entrega/",
+        horario: 'Lun-Sab 10:00-21:00',
+        telefono: '+54 11 5555-0001'
     },
     'hermes-gear': {
         nombre: 'Tecnología Hermes Gear',
@@ -48,21 +50,27 @@ const localesData = {
         ubicacion: 'Planta Baja - Local 2',
         imagen: 'imagenes/logos/hermes.png',
         categoria: 'tecnologia',
-        url: "https://jhonem.github.io/ladingHermes/"
+        url: "https://jhonem.github.io/ladingHermes/",
+        horario: 'Lun-Sab 10:00-21:00',
+        telefono: '+54 11 5555-0002'
     },
     'collective': {
         nombre: 'The Collective (Moda)',
         descripcion: 'Concept Store multimarca. Prendas de diseñadores emergentes y colecciones de moda urbana y vanguardista.',
         ubicacion: 'Planta Baja - Local 3',
         imagen: 'imagenes/collective_fashion.png',
-        categoria: 'moda'
+        categoria: 'moda',
+        horario: 'Lun-Dom 10:00-22:00',
+        telefono: '+54 11 5555-0003'
     },
     'studio-fit': {
         nombre: 'Studio Fit (Deportes)',
         descripcion: 'Ropa deportiva técnica y calzado de alto rendimiento, enfocado en running, yoga y entrenamiento funcional.',
         ubicacion: 'Planta Baja - Local 4',
         imagen: 'imagenes/studio_fit.png',
-        categoria: 'deportes'
+        categoria: 'deportes',
+        horario: 'Lun-Dom 10:00-22:00',
+        telefono: '+54 11 5555-0004'
     },
     'belle-epoque': {
         nombre: 'Pastelería Belle Epoque',
@@ -70,52 +78,117 @@ const localesData = {
         ubicacion: 'Primer Piso - Local 5',
         imagen: 'imagenes/logos/belle.png',
         categoria: 'gastronomia',
-        url: "https://euge-90.github.io/belle-epoque-pasteleria/"
+        url: "https://euge-90.github.io/belle-epoque-pasteleria/",
+        horario: 'Lun-Dom 09:00-21:00',
+        telefono: '+54 11 5555-0005'
     },
     'green-life': {
         nombre: 'Green Life Market',
         descripcion: 'Tienda de productos orgánicos, suplementos, alimentos plant-based y jugos naturales. El lado saludable del urbanismo.',
         ubicacion: 'Primer Piso - Local 6',
         imagen: 'imagenes/green_life.png',
-        categoria: 'alimentacion'
+        categoria: 'alimentacion',
+        horario: 'Lun-Dom 10:00-21:00',
+        telefono: '+54 11 5555-0006'
     },
     'conceptBA': {
-        nombre: '.ConceptBA ',
+        nombre: '.ConceptBA',
         descripcion: 'Muebles y Decoración, productos que embellecen los espacios y cuentan historias.',
         ubicacion: 'Primer Piso - Local 7',
         imagen: 'imagenes/logos/conceptBA.png',
         categoria: 'hogar',
-        url: "https://jupuiguade.github.io/ConceptBA_TP_Individual"
+        url: "https://jupuiguade.github.io/ConceptBA_TP_Individual",
+        horario: 'Lun-Sab 10:00-20:00',
+        telefono: '+54 11 5555-0007'
     },
     'barber-club': {
         nombre: 'The Barber Club',
         descripcion: 'Barbería premium con estilo vintage. Cortes, afeitados clásicos y venta de productos de cuidado masculino exclusivo.',
         ubicacion: 'Primer Piso - Local 8',
         imagen: 'imagenes/barber_club.png',
-        categoria: 'servicios'
+        categoria: 'servicios',
+        horario: 'Mar-Sab 10:00-20:00',
+        telefono: '+54 11 5555-0008'
     },
     'vision-total': {
         nombre: 'Óptica Visión Total',
         descripcion: 'Venta de lentes de contacto, exámenes visuales y colecciones exclusivas de gafas de sol de diseñador.',
         ubicacion: 'Segundo Piso - Local 9',
         imagen: 'imagenes/vision_total.png',
-        categoria: 'salud'
+        categoria: 'salud',
+        horario: 'Lun-Sab 10:00-20:00',
+        telefono: '+54 11 5555-0009'
     },
     'pets-spa': {
         nombre: "Pet's Urban Spa",
         descripcion: 'Tienda y spa para mascotas. Productos orgánicos, accesorios de diseño y servicios de peluquería y bienestar canino/felino.',
         ubicacion: 'Segundo Piso - Local 10',
         imagen: 'imagenes/pets_spa.png',
-        categoria: 'mascotas'
+        categoria: 'mascotas',
+        horario: 'Lun-Sab 10:00-20:00',
+        telefono: '+54 11 5555-0010'
     },
     'travel-hub': {
         nombre: 'Travel Hub (Agencia Boutique)',
         descripcion: 'Agencia de viajes especializada en experiencias de lujo, destinos exóticos y escapadas de fin de semana con estilo.',
         ubicacion: 'Segundo Piso - Local 11',
         imagen: 'imagenes/travel_hub.png',
-        categoria: 'servicios'
+        categoria: 'servicios',
+        horario: 'Lun-Vie 10:00-19:00, Sab 10:00-14:00',
+        telefono: '+54 11 5555-0011'
     }
 };
+
+// ============================================
+// CATEGORÍAS DE LOCALES
+// ============================================
+/**
+ * Lista de categorías disponibles para filtrar locales
+ * Se usa para generar el selector de filtros dinámicamente
+ */
+const categorias = {
+    'todas': 'Todas las categorías',
+    'tecnologia': 'Tecnología',
+    'moda': 'Moda',
+    'deportes': 'Deportes',
+    'gastronomia': 'Gastronomía',
+    'alimentacion': 'Alimentación',
+    'hogar': 'Hogar y Decoración',
+    'servicios': 'Servicios',
+    'salud': 'Salud y Óptica',
+    'mascotas': 'Mascotas'
+};
+
+/**
+ * Obtiene todos los locales de una categoría específica
+ * @param {String} categoria - ID de la categoría a filtrar
+ * @returns {Array} Array de locales que pertenecen a la categoría
+ */
+function getLocalesPorCategoria(categoria) {
+    if (categoria === 'todas') {
+        return Object.entries(localesData);
+    }
+    return Object.entries(localesData).filter(([id, local]) => 
+        local.categoria === categoria
+    );
+}
+
+/**
+ * Obtiene el número total de locales
+ * @returns {Number} Cantidad total de locales registrados
+ */
+function getTotalLocales() {
+    return Object.keys(localesData).length;
+}
+
+/**
+ * Obtiene un local específico por su ID
+ * @param {String} id - ID del local a buscar
+ * @returns {Object|null} Datos del local o null si no existe
+ */
+function getLocalById(id) {
+    return localesData[id] || null;
+}
 
 // ============================================
 // OPTIMIZACIÓN: DEBOUNCE
@@ -239,6 +312,66 @@ if (inputBuscar) {
 }
 
 // ============================================
+// FILTRO POR CATEGORÍA
+// ============================================
+/**
+ * Sistema de filtrado por categoría de locales
+ * Permite a los usuarios ver solo los locales de una categoría específica
+ */
+const filtroCategoria = document.getElementById('filtro-categoria');
+
+if (filtroCategoria) {
+    /**
+     * Maneja el cambio de categoría en el filtro
+     * Muestra/oculta los locales según la categoría seleccionada
+     */
+    filtroCategoria.addEventListener('change', function() {
+        const categoriaSeleccionada = this.value;
+        const localesMapa = document.querySelectorAll('.local-mapa');
+        
+        // Si es "todas", mostrar todos los locales
+        if (categoriaSeleccionada === 'todas') {
+            localesMapa.forEach(local => {
+                local.style.display = '';
+                local.classList.remove('filtrado-oculto');
+            });
+            limpiarDestacados();
+            if (resultadoBusqueda) {
+                resultadoBusqueda.innerHTML = '';
+            }
+            return;
+        }
+        
+        // Filtrar locales por categoría
+        const localesEncontrados = [];
+        localesMapa.forEach(local => {
+            const localId = local.dataset.local;
+            const localData = localesData[localId];
+            
+            if (localData && localData.categoria === categoriaSeleccionada) {
+                local.style.display = '';
+                local.classList.remove('filtrado-oculto');
+                localesEncontrados.push(localId);
+            } else {
+                local.style.display = 'none';
+                local.classList.add('filtrado-oculto');
+            }
+        });
+        
+        // Mostrar mensaje con resultados del filtro
+        if (resultadoBusqueda) {
+            const nombreCategoria = categorias[categoriaSeleccionada] || categoriaSeleccionada;
+            if (localesEncontrados.length > 0) {
+                resultadoBusqueda.innerHTML = '<p><strong>Mostrando ' + localesEncontrados.length + ' local(es) de ' + nombreCategoria + '</strong></p>';
+                destacarLocales(localesEncontrados);
+            } else {
+                resultadoBusqueda.innerHTML = '<p class="no-resultados">No hay locales en la categoría ' + nombreCategoria + '</p>';
+            }
+        }
+    });
+}
+
+// ============================================
 // FUNCIONES AUXILIARES DE BÚSQUEDA
 // ============================================
 
@@ -310,6 +443,8 @@ function scrollToLocal(id) {
  * - Imagen
  * - Descripción detallada
  * - Ubicación (piso y número de local)
+ * - Horario de atención
+ * - Teléfono de contacto
  */
 
 // Obtener elementos del modal del HTML
@@ -318,6 +453,8 @@ const modalTitulo = document.getElementById('modal-titulo');
 const modalImagen = document.getElementById('modal-imagen');
 const modalDescripcion = document.getElementById('modal-descripcion');
 const modalUbicacion = document.getElementById('modal-ubicacion');
+const modalHorario = document.getElementById('modal-horario');
+const modalTelefono = document.getElementById('modal-telefono');
 const modalCerrar = document.querySelector('.modal-cerrar');
 const modalLink = document.getElementById('modal-link')
 
@@ -344,7 +481,7 @@ document.querySelectorAll('.local-mapa').forEach(boton => {
 
 /**
  * Muestra el modal con la información de un local
- * @param {Object} local - Objeto con datos del local (nombre, imagen, descripcion, ubicacion)
+ * @param {Object} local - Objeto con datos del local (nombre, imagen, descripcion, ubicacion, horario, telefono)
  */
 function mostrarModal(local) {
     // Llenar el modal con la información del local
@@ -353,15 +490,28 @@ function mostrarModal(local) {
     modalImagen.alt = 'Vista del local ' + local.nombre;
     modalDescripcion.textContent = local.descripcion;
     modalUbicacion.innerHTML = '<strong>Ubicación:</strong> ' + local.ubicacion;
+    
+    // Mostrar horario si está disponible
+    if (modalHorario) {
+        modalHorario.innerHTML = local.horario ? '<strong>Horario:</strong> ' + local.horario : '';
+    }
+    
+    // Mostrar teléfono si está disponible
+    if (modalTelefono) {
+        modalTelefono.innerHTML = local.telefono ? '<strong>Teléfono:</strong> <a href="tel:' + local.telefono.replace(/\s/g, '') + '">' + local.telefono + '</a>' : '';
+    }
 
-    if (local.url) {
-        $(modalLink).attr('href', local.url);
-        $(modalLink).css('cursor', 'pointer');
-        $(modalLink).css('pointer-events', 'auto');
-    } else {
-        $(modalLink).removeAttr('href');
-        $(modalLink).css('cursor', 'default'); // Cursor flecha normal
-        $(modalLink).css('pointer-events', 'none');
+    // Configurar el enlace del local (usando JavaScript vanilla para compatibilidad)
+    if (modalLink) {
+        if (local.url) {
+            modalLink.href = local.url;
+            modalLink.style.cursor = 'pointer';
+            modalLink.style.pointerEvents = 'auto';
+        } else {
+            modalLink.removeAttribute('href');
+            modalLink.style.cursor = 'default';
+            modalLink.style.pointerEvents = 'none';
+        }
     }
 
     // Mostrar el modal
