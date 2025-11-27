@@ -362,7 +362,8 @@ if (filtroCategoria) {
         if (resultadoBusqueda) {
             const nombreCategoria = categorias[categoriaSeleccionada] || categoriaSeleccionada;
             if (localesEncontrados.length > 0) {
-                resultadoBusqueda.innerHTML = '<p><strong>Mostrando ' + localesEncontrados.length + ' local(es) de ' + nombreCategoria + '</strong></p>';
+                const textoLocal = localesEncontrados.length === 1 ? 'local' : 'locales';
+                resultadoBusqueda.innerHTML = '<p><strong>Mostrando ' + localesEncontrados.length + ' ' + textoLocal + ' de ' + nombreCategoria + '</strong></p>';
                 destacarLocales(localesEncontrados);
             } else {
                 resultadoBusqueda.innerHTML = '<p class="no-resultados">No hay locales en la categoría ' + nombreCategoria + '</p>';
@@ -496,9 +497,9 @@ function mostrarModal(local) {
         modalHorario.innerHTML = local.horario ? '<strong>Horario:</strong> ' + local.horario : '';
     }
     
-    // Mostrar teléfono si está disponible
+    // Mostrar teléfono si está disponible (formatear para enlace tel: eliminando espacios y guiones)
     if (modalTelefono) {
-        modalTelefono.innerHTML = local.telefono ? '<strong>Teléfono:</strong> <a href="tel:' + local.telefono.replace(/\s/g, '') + '">' + local.telefono + '</a>' : '';
+        modalTelefono.innerHTML = local.telefono ? '<strong>Teléfono:</strong> <a href="tel:' + local.telefono.replace(/[\s-]/g, '') + '">' + local.telefono + '</a>' : '';
     }
 
     // Configurar el enlace del local (usando JavaScript vanilla para compatibilidad)
